@@ -1,0 +1,34 @@
+/* Akaora Inventory Pro v62 — compact reference typography + inventory UI.
+   Inter is loaded only if online, Segoe UI Variable and system faces are offline fallbacks.
+   Receipt and product barcode typography are intentionally untouched. */
+:root{--v62-ui-font:Inter,"Segoe UI Variable","Segoe UI",-apple-system,BlinkMacSystemFont,Arial,sans-serif}
+html,body,body.dark-mode,body.ak29-glass,body.ak29-light,#root,.app,.main,.content,
+button,input,textarea,select,option,.sidebar,.topbar,.card,.modal,.ak31-settings-shell,
+.ak31-settings-main,.ak46-studio,.v52-studio-workspace,.akaora-pos-frame{
+ font-family:var(--v62-ui-font)!important;
+ font-optical-sizing:auto;
+ -webkit-font-smoothing:antialiased;
+ text-rendering:optimizeLegibility;
+}
+/* screenshot reference: compact, crisp headings, confident medium-weight labels */
+.content :is(h1,h2,h3,h4),.ak31-settings-main :is(h1,h2,h3),.v52-studio-workspace :is(h1,h2,h3),
+.ak46-studio :is(h1,h2,h3){font-family:var(--v62-ui-font)!important;font-weight:800;letter-spacing:-.036em;line-height:1.18}
+.sidebar .brand strong,.shop-sidebar-copy strong,.topbar .brand strong{font-weight:800!important;letter-spacing:-.025em}
+.sidebar .nav,.sidebar button.nav,.mobile-nav button{font-weight:650!important;letter-spacing:-.012em}
+.content .metric-value,.content .ak29-metric-value{font-family:var(--v62-ui-font)!important;font-weight:830!important;letter-spacing:-.043em;font-variant-numeric:tabular-nums}
+.content .metric-label,.content .metric-note,{letter-spacing:-.012em}
+.content button,.topbar button,.sidebar button,.mobile-nav button{font-weight:700}
+.content :is(input,select,textarea){font-weight:500}
+/* Never restyle the receipt canvas: must match actual printer output */
+pre,code,kbd,samp,.ak56-receipt-text,.ak56-thermal-text,.ak46-receipt-canvas,.v50-text-preview,
+.thermal-receipt,.ak46-paper{font-family:inherit}
+/* Mobile headings remain comfortably legible. */
+@media(max-width:740px){.content :is(h1,h2,h3){letter-spacing:-.03em}}
+/* Guard against legacy theme-specific !important body fonts. */
+html body[class],html body.dark-mode,html body.ak29-glass,html body.ak29-light{font-family:var(--v62-ui-font)!important}
+/* Highest-specificity legacy editorial theme currently sets an important font. */
+html body.ak29-glass.ak33-editorial.dark-mode,
+html body.ak29-glass.ak33-editorial.ak29-light,
+html body.ak29-glass.ak33-editorial{
+ font-family:var(--v62-ui-font)!important;
+}

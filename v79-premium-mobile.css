@@ -1,0 +1,118 @@
+/* Akaora Inventory Pro v77 — compact mobile header, accessible premium menu and theme controls. */
+body { --ak77-accent:#9678ee; --ak77-deep:#7955db; --ak77-tint:rgba(150,120,238,.16); --ak77-line:rgba(150,120,238,.42); }
+body.ak77-purple { --ak77-accent:#9678ee; --ak77-deep:#7955db; --ak77-tint:rgba(150,120,238,.16); --ak77-line:rgba(150,120,238,.42); }
+body.ak77-blue   { --ak77-accent:#4289ec; --ak77-deep:#2364c7; --ak77-tint:rgba(66,137,236,.16); --ak77-line:rgba(66,137,236,.42); }
+body.ak77-green  { --ak77-accent:#20ad77; --ak77-deep:#08794f; --ak77-tint:rgba(32,173,119,.16); --ak77-line:rgba(32,173,119,.42); }
+body.ak77-rose   { --ak77-accent:#e5668c; --ak77-deep:#b9356a; --ak77-tint:rgba(229,102,140,.16); --ak77-line:rgba(229,102,140,.42); }
+body.ak77-amber  { --ak77-accent:#d4a443; --ak77-deep:#a66f17; --ak77-tint:rgba(212,164,67,.16); --ak77-line:rgba(212,164,67,.42); }
+body.ak77-purple,body.ak77-blue,body.ak77-green,body.ak77-rose,body.ak77-amber {
+  --ak33-brand-strong:var(--ak77-deep);
+  --ak33-brand:var(--ak77-accent);
+  --ak33-brand-tint:var(--ak77-tint);
+  --ak43-accent:var(--ak77-deep);
+}
+body.ak29-glass.ak33-editorial button.amber,
+body.ak29-glass.ak33-editorial #content > .heading .actions .amber,
+body.ak29-glass.ak33-editorial #content .ak31-settings-main>.heading .actions .amber,
+body.ak29-glass.ak33-editorial .ak76-home-bottom .amber {background:linear-gradient(115deg,var(--ak77-accent),var(--ak77-deep))!important;border-color:var(--ak77-deep)!important;color:white!important}
+body.ak29-glass.ak33-editorial .sidebar .nav.active,body.ak29-glass.ak33-editorial .mobile-nav button.active {
+ background:var(--ak77-tint)!important;color:var(--ak77-accent)!important;border-color:var(--ak77-line)!important;
+}
+body.ak29-glass.ak33-editorial .sidebar .nav.active svg,body.ak29-glass.ak33-editorial .mobile-nav button.active svg{color:var(--ak77-accent)!important;stroke:currentColor!important}
+body.ak29-glass.ak33-editorial #content .ak77-ui-card select:focus-visible{outline:2px solid var(--ak77-accent);outline-offset:2px}
+body.ak-icon-minimal .nav svg *,body.ak-icon-minimal .mobile-nav svg *,body.ak-icon-minimal .metric-icon svg *,body.ak-icon-minimal .ak77-more-panel svg *{stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}
+body.ak-icon-rounded .nav svg *,body.ak-icon-rounded .mobile-nav svg *,body.ak-icon-rounded .metric-icon svg *,body.ak-icon-rounded .ak77-more-panel svg *{stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+body.ak-icon-bold .nav svg *,body.ak-icon-bold .mobile-nav svg *,body.ak-icon-bold .metric-icon svg *,body.ak-icon-bold .ak77-more-panel svg *{stroke-width:2.45;stroke-linecap:round;stroke-linejoin:round}
+/* Product identity must not be replaced by the user's shop name in the compact header. */
+.topbar .ak77-product-identity{display:flex;gap:8px;align-items:center;min-width:0;max-width:100%;overflow:hidden}
+.topbar .ak77-product-identity .ak77-brand-icon{flex:0 0 36px;width:36px;height:36px;border-radius:10px;display:flex;justify-content:center;align-items:center;overflow:hidden}
+.topbar .ak77-product-identity .ak77-brand-icon img{width:100%;height:100%;object-fit:contain}
+.topbar .ak77-product-copy{display:flex;flex-direction:column;min-width:0;gap:3px}
+.topbar .ak77-product-row{display:flex;align-items:center;gap:6px;min-width:0;white-space:nowrap}
+.topbar .ak77-product-name{font-size:13px;letter-spacing:-.04em;font-weight:800;line-height:1.15;color:var(--ak33-ink,#fff)}
+.topbar .ak77-product-subtitle{font-size:10px;line-height:1.1;color:var(--ak33-muted,#aaa);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .ak77-pro{display:inline-flex;gap:4px;align-items:center;background:linear-gradient(135deg,#fbe19b,#ca9440 70%,#8d591a);color:#32220d;padding:4px 7px;border-radius:8px;font-weight:900;font-size:11px;line-height:1;border:1px solid rgba(255,239,177,.55);box-shadow:0 0 12px rgba(222,181,84,.2)}
+.topbar .ak77-pro svg{width:13px;height:13px;color:#6c4517;flex:none;display:block}
+/* Home greeting retains its content but is moved below the operational dashboard. */
+#content>.ak77-home-last{margin:16px 0 22px;min-width:0}
+#content>.ak77-home-last .heading{margin:0!important;display:block!important;padding:14px!important}
+#content>.ak77-home-last .heading .actions{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%;margin-top:12px!important}
+#content>.ak77-home-last .heading .actions button{width:100%!important;min-width:0!important;max-width:none!important;white-space:normal!important}
+#content>.ak77-home-last .heading .actions input{display:none!important}
+/* Customize section. */
+.ak77-ui-card{grid-column:1/-1;max-width:100%;min-width:0}
+.ak77-ui-card h3{display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.ak77-ui-card .ak77-ui-subtitle{font-size:12px;color:var(--ak33-muted);line-height:1.5;margin:0 0 13px}
+.ak77-ui-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ak77-ui-field{display:grid;gap:7px;min-width:0}.ak77-ui-field>label{font-weight:700;font-size:12px}
+.ak77-ui-field select{width:100%;height:42px;border-radius:11px}
+.ak77-swatches{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;grid-column:1/-1}
+.ak77-swatch{display:inline-flex;gap:6px;align-items:center;min-height:38px;border:1px solid var(--ak33-line,#444);border-radius:999px;padding:6px 11px;background:var(--ak33-surface2,#292932);color:var(--ak33-ink,#fff);font-size:12px;font-weight:700;cursor:pointer}
+.ak77-swatch[aria-pressed=true]{border-color:var(--ak77-accent);box-shadow:0 0 0 2px var(--ak77-tint)}
+.ak77-swatch-dot{display:inline-block;width:13px;height:13px;border-radius:50%;background:var(--swatch)}
+.ak77-preview-icon-set{display:flex;gap:10px;margin-top:8px}.ak77-preview-icon-set>span{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--ak33-line);border-radius:11px;background:var(--ak33-surface2);color:var(--ak77-accent)}
+.ak77-preview-icon-set svg{width:20px;height:20px}
+/* Premium More bottom sheet and grouped navigation. */
+.ak77-more-backdrop{position:fixed;inset:0;z-index:250;background:rgba(5,6,14,.67);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);display:flex;align-items:flex-end;justify-content:center;padding:12px 12px max(12px,env(safe-area-inset-bottom))}
+.ak77-more-panel{width:min(100%,480px);max-height:min(86dvh,770px);overflow-y:auto;overscroll-behavior:contain;background:var(--ak33-surface,#23232e);color:var(--ak33-ink,#fff);border:1px solid var(--ak33-line,#444);border-radius:25px;padding:12px 14px 18px;box-shadow:0 30px 90px rgba(0,0,0,.48)}
+.ak77-sheet-grip{width:43px;height:4px;border-radius:99px;background:var(--ak33-line,#686578);margin:0 auto 13px}
+.ak77-more-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:15px}
+.ak77-more-heading h2{font-size:19px;letter-spacing:-.04em;margin:0}
+.ak77-more-heading p{font-size:11px;color:var(--ak33-muted,#aaa);margin:3px 0 0}
+.ak77-more-close{width:35px;height:35px;flex:0 0 35px;display:grid;place-items:center;border-radius:11px;background:var(--ak33-surface2,#31313b);color:var(--ak33-ink,#fff);border:1px solid var(--ak33-line,#444)}
+.ak77-more-section-title{font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--ak33-muted,#aaa);margin:12px 0 8px;text-transform:uppercase}
+.ak77-featured{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.ak77-featured-btn{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:12px;padding:12px!important;min-height:100px;border-radius:16px!important;border:1px solid var(--ak77-line)!important;background:var(--ak77-tint)!important;color:var(--ak33-ink,#fff)!important;text-align:left!important;box-shadow:none!important}
+.ak77-featured-btn[aria-current=page]{border-color:var(--ak77-accent)!important;box-shadow:0 0 0 1px var(--ak77-accent) inset!important}
+.ak77-featured-btn .ak77-feature-icon{width:35px;height:35px;display:grid;place-items:center;border-radius:11px;background:var(--ak77-accent);color:#fff}
+.ak77-featured-btn .ak77-feature-icon svg{width:19px;height:19px}
+.ak77-featured-btn .ak77-feature-copy{display:flex;flex-direction:column;gap:2px}
+.ak77-featured-btn strong{font-size:12px;font-weight:820}.ak77-featured-btn small{font-size:10px;color:var(--ak33-muted,#aaa)}
+.ak77-operations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ak77-operation{display:flex;gap:9px;align-items:center;min-width:0;min-height:49px;padding:9px 10px!important;border-radius:13px!important;border:1px solid var(--ak33-line,#444)!important;background:var(--ak33-surface2,#292932)!important;color:var(--ak33-ink,#fff)!important;text-align:left!important;box-shadow:none!important}
+.ak77-operation svg{width:19px;height:19px;flex:0 0 19px;color:var(--ak77-accent)}
+.ak77-operation span{font-weight:700;font-size:12px;white-space:normal}
+.ak77-operation[aria-current=page]{border-color:var(--ak77-accent)!important;background:var(--ak77-tint)!important}
+.ak77-more-footer{display:flex;gap:7px;align-items:center;justify-content:center;margin-top:17px;font-size:10px;color:var(--ak33-muted)}
+.ak77-more-footer svg{width:13px;height:13px;fill:#d5a348;color:#d5a348}
+/* Mobile-only bottom navigation: exactly four essential destinations plus More. */
+@media(max-width:850px){
+ body.ak29-glass.ak33-editorial .mobile-nav{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:3px!important;align-items:center!important;padding:5px max(6px,env(safe-area-inset-right)) max(5px,env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-left))!important}
+ body.ak29-glass.ak33-editorial .mobile-nav>button{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0!important;max-width:none!important;min-height:52px!important;padding:6px 2px!important;border-radius:12px!important;flex:1 1 auto!important}
+ body.ak29-glass.ak33-editorial .mobile-nav>button span:not(.ak32-nav-icon){font-size:10px!important;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+ body.ak29-glass.ak33-editorial .mobile-nav>button svg{width:19px!important;height:19px!important}
+ body.ak29-glass.ak33-editorial .mobile-nav .v15-mobile-more-panel,body.ak29-glass.ak33-editorial .mobile-nav .v15-mobile-more-btn{display:none!important}
+ body.ak29-glass.ak33-editorial .topbar{min-height:53px!important;max-height:62px!important;padding:8px 9px!important;gap:6px!important;align-items:center!important}
+ body.ak29-glass.ak33-editorial .topbar .shop-top-brand{margin:0!important;min-width:0!important;flex:1 1 auto!important;max-width:calc(100% - 104px)!important}
+ body.ak29-glass.ak33-editorial .topbar .ak77-brand-icon{width:32px;height:32px;flex-basis:32px;border-radius:8px}
+ body.ak29-glass.ak33-editorial .topbar .ak77-product-name{font-size:12px!important}
+ body.ak29-glass.ak33-editorial .topbar .ak77-pro{font-size:11px!important;padding:4px 7px!important}
+ body.ak29-glass.ak33-editorial .topbar .top-actions{display:flex!important;gap:5px!important;align-items:center!important;flex:0 0 auto!important;margin-left:auto}
+ body.ak29-glass.ak33-editorial .topbar #v20PrinterHub,body.ak29-glass.ak33-editorial .topbar .desktop-settings{display:none!important}
+ body.ak29-glass.ak33-editorial .topbar #akaoraNotifyButton,body.ak29-glass.ak33-editorial .topbar .account-trigger,body.ak29-glass.ak33-editorial .topbar .ak76-header-more{width:36px!important;height:36px!important;min-width:36px!important;min-height:36px!important;padding:5px!important;border-radius:11px!important}
+ body.ak29-glass.ak33-editorial .topbar .account-trigger>span:not(.account-avatar){display:none!important}
+ body.ak29-glass.ak33-editorial #content>.ak77-home-last .heading{padding:13px!important}
+ body.ak29-glass.ak33-editorial #content>.ak77-home-last .heading .actions{grid-template-columns:1fr 1fr!important}
+ body.ak29-glass.ak33-editorial #content>.ak77-home-last .heading .actions button:last-of-type{grid-column:1/-1}
+}
+@media(max-width:360px){.topbar .ak77-product-subtitle{display:none}.topbar .ak77-product-row{gap:4px}.topbar .ak77-product-name{font-size:11px!important}.topbar .ak77-pro{padding:3px 5px!important}.ak77-more-panel{padding:11px 10px 16px}.ak77-featured{gap:6px}}
+@media(max-width:600px){.ak77-ui-form{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.ak77-more-panel,.ak77-featured-btn,.ak77-operation{animation:none!important;transition:none!important}}
+/* Override the old abbreviated "Akaora" mobile brand introduced in v44. */
+@media(max-width:850px){
+ html body.ak29-glass.ak33-editorial .topbar .ak44-mobile-brand{display:none!important}
+ html body.ak29-glass.ak33-editorial .topbar .brand.shop-top-brand.ak77-product-identity{display:flex!important;flex-direction:row!important;align-items:center!important;gap:8px!important;flex:1 1 auto!important;width:auto!important;min-width:0!important;max-width:calc(100% - 145px)!important;overflow:visible!important}
+ html body.ak29-glass.ak33-editorial .topbar .ak77-product-identity .ak77-product-copy{display:flex!important;min-width:0!important}
+ html body.ak29-glass.ak33-editorial .topbar .ak77-product-row{display:flex!important;flex-wrap:nowrap!important;gap:5px!important}
+ html body.ak29-glass.ak33-editorial .app .main>header.topbar{height:56px!important;min-height:56px!important;max-height:56px!important}
+}
+@media(max-width:375px){
+ html body.ak29-glass.ak33-editorial .topbar .brand.shop-top-brand.ak77-product-identity{max-width:calc(100% - 134px)!important;gap:5px!important}
+ html body.ak29-glass.ak33-editorial .topbar .ak77-product-name{font-size:11px!important}
+ html body.ak29-glass.ak33-editorial .topbar .ak77-pro{padding:3px 5px!important}
+}
+/* Moving the animated greeting to the end must not leave it invisible while off-screen. */
+html body.ak29-glass.ak33-editorial #content>.ak77-home-last .heading,
+html body.ak29-glass.ak33-editorial #content>.ak77-home-last .ak33-home-heading{
+ opacity:1!important;transform:none!important;animation:none!important;visibility:visible!important;
+}

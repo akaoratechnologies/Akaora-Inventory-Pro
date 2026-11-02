@@ -1,0 +1,181 @@
+/* Akaora Inventory Pro v46 – Invoice Studio. Namespaced to avoid changing legacy forms. */
+.ak46-studio{display:grid;gap:16px;min-width:0}.ak46-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ak46-top h2{font-size:24px;margin:0 0 5px;letter-spacing:-.035em}.ak46-top p{color:var(--ak33-muted,#a1a1aa);margin:0;font-size:12px}
+.ak46-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.ak46-toolbar button{min-height:40px!important;padding:8px 13px!important}
+.ak46-grid{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:16px;align-items:start}
+.ak46-config,.ak46-result{min-width:0;padding:18px;border:1px solid var(--ak33-line,#383842);border-radius:17px;background:var(--ak33-surface,#23232b)}
+.ak46-config{display:grid;gap:15px}.ak46-group{display:grid;gap:9px;padding-bottom:15px;border-bottom:1px solid var(--ak33-line,#383842)}.ak46-group:last-child{border:0;padding:0}
+.ak46-group h3,.ak46-result h3{margin:0;font-size:14px;color:var(--ak33-ink,#fff);font-weight:760}
+.ak46-help{font-size:11px;line-height:1.5;color:var(--ak33-muted,#aaa);margin:0}
+.ak46-field{display:grid;gap:5px;min-width:0}.ak46-field>label{display:block;font-size:11px;font-weight:680;color:var(--ak33-muted,#aaa);margin:0}
+.ak46-field input,.ak46-field select,.ak46-field textarea{min-width:0;width:100%;height:42px;padding:10px 12px;border:1px solid var(--ak33-line,#444)!important;border-radius:10px;background:var(--ak33-input,#30303a)!important;color:var(--ak33-ink,#fff)!important;font-size:12px}
+.ak46-field textarea{resize:vertical;min-height:62px;height:auto}
+.ak46-cols{display:grid;grid-template-columns:1fr 1fr;gap:9px}.ak46-checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ak46-check{display:flex!important;align-items:center;gap:9px;background:var(--ak33-surface2,#292932);border:1px solid var(--ak33-line,#444);padding:9px 10px;border-radius:10px;color:var(--ak33-ink,#fff)!important;font-size:11px;cursor:pointer}
+.ak46-check input{width:16px!important;height:16px!important;margin:0!important;flex:0 0 16px;accent-color:var(--ak33-brand-strong,#9276ec)}
+.ak46-sections{display:grid;gap:6px}.ak46-section{display:flex;gap:8px;align-items:center;padding:7px 9px;background:var(--ak33-surface2,#2c2c36);border:1px solid var(--ak33-line,#444);border-radius:10px;font-size:12px;color:var(--ak33-ink,#fff);cursor:grab}
+.ak46-section.dragging{opacity:.45}.ak46-section>svg{width:16px;height:16px;flex:none;color:var(--ak33-muted,#aaa)}.ak46-section b{flex:1;font-weight:650}
+.ak46-section button{width:27px;height:27px!important;min-height:27px!important;max-height:27px!important;padding:0!important;display:grid!important;place-items:center;font-size:13px!important;border-radius:7px!important;background:var(--ak33-surface,#333)!important;color:var(--ak33-ink,#fff)!important;border:1px solid var(--ak33-line,#444)!important}
+.ak46-tabs{display:flex;gap:5px;padding:5px;background:var(--ak33-surface2,#2b2b34);border:1px solid var(--ak33-line,#444);border-radius:12px}
+.ak46-tabs button{flex:1;min-width:0;height:36px!important;min-height:36px!important;padding:7px 9px!important;border:0!important;background:transparent!important;color:var(--ak33-muted,#aaa)!important;font-size:12px!important;border-radius:9px!important}
+.ak46-tabs button[aria-selected=true]{background:var(--ak33-brand-strong,#9276ec)!important;color:#fff!important}
+.ak46-stage{padding:18px 12px;min-width:0;overflow:auto;border:1px solid var(--ak33-line,#444);border-radius:14px;background:#dbe1eb;display:flex;justify-content:center;align-items:flex-start;min-height:330px}
+.ak46-sheet,.ak46-sheet *{box-sizing:border-box}.ak46-sheet{width:100%;max-width:695px;min-width:0;padding:28px 26px;background:#fff;color:#131723;box-shadow:0 8px 25px #1112;font:13px/1.5 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.ak46-sheet.style-classic{font-family:Georgia,serif}.ak46-sheet.style-minimal{box-shadow:none}.ak46-sheet.style-elegant{font-family:Georgia,serif}.ak46-sheet.style-elegant{--receipt-accent:#a37a40}.ak46-sheet.style-modern{--receipt-accent:#7554ca}.ak46-sheet.style-classic{--receipt-accent:#253b65}.ak46-sheet.style-minimal{--receipt-accent:#222}
+.ak46-sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;border-bottom:2px solid var(--receipt-accent,#7554ca);padding-bottom:16px}
+.ak46-sheet-brand{display:flex;align-items:flex-start;gap:14px;min-width:0}.ak46-sheet-brand .ak46-logo-box{display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none}.ak46-sheet-brand img{width:100%;height:100%;display:block}
+.ak46-sheet-brand h2{margin:0 0 4px;font-size:22px;line-height:1.2;overflow-wrap:anywhere}.ak46-sheet-brand p{font-size:11px;margin:2px 0;color:#4b5563;overflow-wrap:anywhere}.ak46-docmark{text-align:right;min-width:100px}.ak46-docmark b{display:block;color:var(--receipt-accent,#7554ca);font-size:19px;letter-spacing:.02em}.ak46-docmark small{color:#64748b}
+.ak46-sheet-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 0}.ak46-meta-block{background:#f5f5fa;padding:11px 12px;border:1px solid #e5e6ef;border-radius:8px;overflow-wrap:anywhere}.ak46-meta-block b{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:4px}
+.ak46-sheet table{width:100%;border-collapse:collapse!important;min-width:0!important}.ak46-sheet th,.ak46-sheet td{border-bottom:1px solid #e5e7eb;text-align:left;font-size:11px;padding:9px 5px}.ak46-sheet th{font-weight:750;color:#475569;text-transform:uppercase;font-size:10px}.ak46-sheet td:last-child,.ak46-sheet th:last-child{text-align:right}.ak46-sheet td:nth-child(2),.ak46-sheet th:nth-child(2){text-align:center}
+.ak46-sheet-totals{margin-top:14px;max-width:300px;margin-left:auto}.ak46-sheet-totals>div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}.ak46-sheet-totals .ak46-final-total{border-top:1px solid #cbd5e1;margin-top:7px;padding-top:9px;font-size:17px;font-weight:800;color:var(--receipt-accent,#7554ca)}
+.ak46-sheet-footer{margin-top:18px;border-top:1px solid #e5e7eb;text-align:center;padding-top:12px;font-size:11px;color:#555;white-space:pre-line}
+.ak46-thermal{max-width:none;display:block;margin:0 auto;height:auto;box-shadow:0 7px 20px #0002;background:#fff;image-rendering:auto}
+.ak46-note{font-size:11px;line-height:1.5;padding:10px 12px;background:var(--ak33-brand-tint,rgba(130,90,220,.1));border:1px solid var(--ak33-line,#444);color:var(--ak33-muted,#aaa);border-radius:10px}
+.ak46-helpback{position:fixed;inset:0;background:#08080acb;display:grid;place-items:center;padding:18px;z-index:100900}.ak46-helpmodal{width:min(455px,100%);padding:23px;border-radius:20px;background:var(--ak33-surface,#23232b);color:var(--ak33-ink,#fff);border:1px solid var(--ak33-line,#555);box-shadow:0 18px 70px #0007}.ak46-helpicon{width:47px;height:47px;border-radius:15px;display:grid;place-items:center;background:var(--ak33-brand-tint,#40385a);margin-bottom:12px}.ak46-helpicon svg{width:24px;height:24px}.ak46-helpmodal h2{font-size:20px;margin:0 0 7px}.ak46-helpmodal p{font-size:12px;line-height:1.6;color:var(--ak33-muted,#aaa)}.ak46-helpmodal ul{font-size:12px;line-height:1.8;padding-left:18px}.ak46-helpactions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px;margin-top:15px}.ak46-helpactions button{min-height:40px!important;padding:9px 13px!important}
+.ak46-helpactions .ak46-primary{background:var(--ak33-brand-strong,#9276ec)!important;color:white!important}
+@media(max-width:1100px){.ak46-grid{grid-template-columns:1fr}.ak46-stage{min-height:260px}}@media(max-width:620px){.ak46-config,.ak46-result{padding:12px}.ak46-cols,.ak46-checks{grid-template-columns:1fr}.ak46-stage{padding:10px 6px}.ak46-sheet{padding:16px 12px}.ak46-sheet-head{flex-direction:column}.ak46-docmark{text-align:left}.ak46-sheet-meta{grid-template-columns:1fr}.ak46-top h2{font-size:19px}.ak46-tabs button{font-size:11px!important}}
+@media print{body.ak46-print-body{margin:0;padding:0;background:white!important}body.ak46-print-body .ak46-sheet{max-width:none!important;box-shadow:none!important;width:100%!important;padding:0!important}body.ak46-print-body .ak46-thermal{margin:0!important;max-width:100%!important;box-shadow:none!important}}
+
+
+/* v47 — Invoice Studio is one complete Settings panel, not a legacy two-column settings card. */
+body.ak29-glass.ak33-editorial #content .ak31-settings-grid #ak46-settings-pane:not([hidden]) {
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  grid-column:1/-1 !important;
+  padding:0 !important;
+  overflow:visible !important;
+  animation:none !important;
+}
+body.ak29-glass.ak33-editorial #content .ak31-settings-shell:has(#ak46-settings-pane:not([hidden])) {
+  max-width:1600px !important;
+  grid-template-columns:200px minmax(0,1fr) !important;
+  gap:22px !important;
+}
+body.ak29-glass.ak33-editorial #content .ak31-settings-main:has(#ak46-settings-pane:not([hidden])) {
+  width:100%; min-width:0; max-width:none !important;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane[hidden] {display:none !important;}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-studio {
+  width:100%; max-width:100%; min-width:0; display:grid !important;
+  gap:17px; container-name:invoice-studio; container-type:inline-size;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-grid {
+  width:100%;min-width:0;display:grid !important;
+  grid-template-columns:minmax(285px,335px) minmax(0,1fr);
+  align-items:start;gap:18px;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-config,
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-result {
+  width:100%;max-width:none;min-width:0;overflow:visible;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-field,
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-cols,
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-checks {min-width:0;}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-result {
+  position:relative; min-width:0;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-stage {
+  display:block!important;
+  width:100%;max-width:100%;min-width:0;
+  padding:18px 14px;overflow:hidden;
+  background:#e8e7ed;border-color:#dedce8;
+}
+body.ak29-glass.ak33-editorial #content #ak46-preview {
+  width:100%!important; min-width:0; display:block;
+}
+body.ak29-glass.ak33-editorial #content #ak46-preview .ak47-a4-fit {
+  position:relative; display:block; max-width:100%;
+  margin-inline:auto; overflow:visible;
+}
+body.ak29-glass.ak33-editorial #content #ak46-preview .ak46-sheet {
+  width:794px;max-width:none;min-width:0;
+  flex:none;background:white !important;color:#151923 !important;
+}
+body.ak29-glass.ak33-editorial #content #ak46-preview .ak46-sheet-head {
+  display:flex !important; flex-wrap:nowrap; align-items:flex-start;gap:18px;
+}
+body.ak29-glass.ak33-editorial #content #ak46-preview .ak46-sheet-brand {
+  flex:1 1 0;min-width:0;
+}
+body.ak29-glass.ak33-editorial #content #ak46-preview .ak46-sheet-brand > div:last-child {min-width:0;flex:1 1 0;overflow-wrap:anywhere;}
+body.ak29-glass.ak33-editorial #content #ak46-preview .ak46-docmark {
+  flex:0 0 150px;min-width:0;text-align:right;overflow-wrap:anywhere;
+}
+body.ak29-glass.ak33-editorial #content #ak46-preview .ak46-sheet-brand h2,
+body.ak29-glass.ak33-editorial #content #ak46-preview .ak46-docmark b {line-height:1.2;}
+body.ak29-glass.ak33-editorial #content #ak46-preview canvas.ak46-thermal {
+  max-width:100% !important;height:auto !important;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-tabs {min-width:0;}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-tabs button {white-space:nowrap;}
+@container invoice-studio (max-width:830px) {
+  .ak46-grid {grid-template-columns:minmax(0,1fr)!important;}
+  .ak46-top {align-items:stretch;}
+  .ak46-result {min-width:0;}
+}
+@media(max-width:1050px) {
+  body.ak29-glass.ak33-editorial #content .ak31-settings-shell:has(#ak46-settings-pane:not([hidden])) {
+    grid-template-columns:minmax(0,1fr)!important;gap:14px!important;
+  }
+}
+@media(max-width:640px) {
+  body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-grid {grid-template-columns:minmax(0,1fr)!important;}
+  body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-config,
+  body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-result {padding:14px!important;}
+  body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-stage {padding:10px 8px;}
+  body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-toolbar {gap:7px;}
+  body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-toolbar button {flex:1 1 135px;}
+}
+/* Ensure SVG icons never inherit oversized legacy toolbar sizing. */
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-toolbar button svg {
+  width:18px!important;height:18px!important;
+  min-width:18px!important;max-width:18px!important;
+  min-height:18px!important;max-height:18px!important;
+  flex:0 0 18px!important;display:inline-block!important;
+  vertical-align:middle!important;stroke-width:1.8!important;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-toolbar button {
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:8px!important;white-space:nowrap!important;min-height:42px!important;
+  height:42px!important;padding:9px 13px!important;line-height:1.2!important;
+  font-size:12px!important;flex:0 0 auto;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-top {
+  align-items:center!important;
+}
+body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-helpicon svg {
+  width:24px!important;height:24px!important;
+}
+@media(max-width:640px){
+ body.ak29-glass.ak33-editorial #content #ak46-settings-pane .ak46-toolbar button {
+  flex:1 1 auto!important;min-width:0!important;font-size:11px!important;
+ }
+}
+/* Print previews are visual only; do not allow their transformed paper to steal toolbar taps. */
+#ak46-settings-pane .ak46-stage {isolation:isolate;}
+#ak46-settings-pane #ak46-preview .ak46-sheet,
+#ak46-settings-pane #ak46-preview canvas.ak46-thermal {pointer-events:none!important;}
+
+/* v48 – Independent Invoice Studio navigation and custom receipt controls */
+body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane{display:block!important;width:100%!important;max-width:1650px;margin:0 auto;min-width:0}
+body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-studio{width:100%;max-width:none;min-width:0;display:grid!important;gap:18px;container:invoice-studio/inline-size}
+body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-grid{display:grid!important;width:100%;min-width:0;grid-template-columns:minmax(300px,380px) minmax(0,1fr);gap:20px;align-items:start}
+body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-config,body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-result{width:100%;min-width:0;max-width:none}
+body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-stage{width:100%;min-width:0;overflow:hidden}
+body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane #ak46-preview{display:block;width:100%;min-width:0}
+body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-toolbar button{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;min-height:42px!important;height:42px!important;white-space:nowrap!important}
+body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-toolbar button svg{display:inline-block!important;vertical-align:middle!important;width:18px!important;height:18px!important;min-width:18px!important;max-width:18px!important;min-height:18px!important;max-height:18px!important;flex:0 0 18px!important}
+body.ak29-glass.ak33-editorial .ak48-color-row{display:flex;align-items:center;gap:10px;padding:5px 8px;border:1px solid var(--ak33-line);border-radius:11px;background:var(--ak33-surface2);font-size:12px;color:var(--ak33-muted)}
+body.ak29-glass.ak33-editorial .ak48-color-row input[type=color]{width:50px!important;min-width:50px!important;height:37px!important;padding:3px!important;border-radius:9px!important;cursor:pointer}
+.ak46-sheet.ak48-custom .ak46-sheet-brand h2{font-size:var(--ak48-head-size,22px)!important;text-align:var(--ak48-align,left)!important}
+.ak46-sheet.ak48-custom .ak46-sheet-brand{align-items:flex-start!important}
+.ak46-sheet.ak48-custom .ak46-sheet-brand > div:last-child{min-width:0;flex:1;overflow-wrap:anywhere}
+.ak46-sheet.ak48-custom .ak46-sheet-meta{line-height:inherit}
+.ak46-sheet.ak48-custom .ak46-meta-block,.ak46-sheet.ak48-custom th,.ak46-sheet.ak48-custom td,.ak46-sheet.ak48-custom .ak46-sheet-footer{font-size:inherit}
+.ak46-sheet.ak48-custom .ak46-sheet-head{border-color:var(--receipt-accent,#7554ca)}
+.ak46-sheet.ak48-custom .ak46-final-total,.ak46-sheet.ak48-custom .ak46-docmark b{color:var(--receipt-accent,#7554ca)!important}
+@container invoice-studio (max-width:880px){.ak46-grid{grid-template-columns:minmax(0,1fr)!important}}
+@media(max-width:1000px){body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:740px){body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-grid{grid-template-columns:minmax(0,1fr)!important;gap:13px}body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-config,body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-result{padding:13px!important}body.ak29-glass.ak33-editorial #content > .ak48-standalone-pane .ak46-toolbar button{flex:1 1 130px!important}}

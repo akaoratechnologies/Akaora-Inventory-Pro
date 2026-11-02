@@ -1,0 +1,12 @@
+{
+  "name": "akaora-inventory-web",
+  "private": true,
+  "version": "83.0.0",
+  "description": "Akaora Inventory Pro - secure static Firebase Hosting deploy (standalone Barcode Studio removed)",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-static.mjs",
+    "test": "node scripts/build-static.mjs && node scripts/security-check.mjs && node scripts/check-inline-js.mjs",
+    "check": "node scripts/security-check.mjs && node scripts/check-inline-js.mjs"
+  }
+}

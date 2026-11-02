@@ -1,0 +1,224 @@
+/* Akaora Inventory Pro v60 — application-wide glass and motion system.
+   Visual chrome only: no transforms or blur on receipts, thermal canvases, or print exports. */
+body.ak29-glass.ak33-editorial {
+  --v60-glass:rgba(35,34,46,.78);
+  --v60-glass-raised:rgba(44,43,57,.82);
+  --v60-glass-soft:rgba(41,39,53,.59);
+  --v60-glass-edge:rgba(201,184,255,.19);
+  --v60-glass-highlight:rgba(255,255,255,.075);
+  --v60-glow:rgba(151,115,240,.23);
+  --v60-ease:cubic-bezier(.22,1,.36,1);
+  --v60-speed:360ms;
+}
+body.ak29-glass.ak33-editorial:not(.dark-mode) {
+  --v60-glass:rgba(255,255,255,.77);
+  --v60-glass-raised:rgba(255,255,255,.86);
+  --v60-glass-soft:rgba(247,244,255,.74);
+  --v60-glass-edge:rgba(112,91,171,.16);
+  --v60-glass-highlight:rgba(255,255,255,.75);
+  --v60-glow:rgba(130,95,217,.17);
+}
+body.ak29-glass.ak33-editorial[data-ak39-motion="subtle"] {--v60-speed:235ms}
+body.ak29-glass.ak33-editorial[data-ak39-motion="lively"] {--v60-speed:540ms}
+body.ak29-glass.ak33-editorial #root {position:relative;isolation:isolate;min-height:100vh}
+body.ak29-glass.ak33-editorial #root::before {
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 49% 49% at 88% 0%,rgba(154,110,246,.155),transparent 76%),radial-gradient(ellipse 52% 56% at 4% 82%,rgba(71,139,220,.095),transparent 80%);
+  background-size:125% 125%;opacity:.84;
+}
+/* Layered ambient glow lives behind interactive content, not on top of text. */
+body.ak29-glass.ak33-editorial .main {position:relative;isolation:isolate}
+body.ak29-glass.ak33-editorial .main::before {
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 35% 29% at 83% 16%,rgba(150,101,235,.095),transparent 78%),radial-gradient(ellipse 34% 35% at 28% 85%,rgba(93,110,222,.09),transparent 80%);
+  opacity:.72;background-size:112% 112%;
+}
+body.ak29-glass.ak33-editorial .main>.content {position:relative;z-index:1}
+body.ak29-glass.ak33-editorial:not(.dark-mode) .main::before {opacity:.37}
+body.ak29-glass.ak33-editorial:not(.dark-mode) #root::before {opacity:.5}
+body.ak29-glass.ak33-editorial #root>.app {position:relative;z-index:1}
+/* Navigation: the chrome should feel like a single premium desktop shell. */
+body.ak29-glass.ak33-editorial .sidebar,
+body.ak29-glass.ak33-editorial .topbar,
+body.ak29-glass.ak33-editorial .mobile-nav {
+  background:var(--v60-glass-raised)!important;
+  border-color:var(--v60-glass-edge)!important;
+  -webkit-backdrop-filter:blur(23px) saturate(155%)!important;
+  backdrop-filter:blur(23px) saturate(155%)!important;
+  box-shadow:inset 0 1px 0 var(--v60-glass-highlight),0 8px 40px rgba(12,9,28,.10);
+}
+body.ak29-glass.ak33-editorial .topbar {z-index:60}
+body.ak29-glass.ak33-editorial .nav,
+body.ak29-glass.ak33-editorial .mobile-nav button,
+body.ak29-glass.ak33-editorial .ak31-settings-navbtn {
+  transition:transform var(--v60-speed) var(--v60-ease),background var(--v60-speed) ease,color var(--v60-speed) ease,box-shadow var(--v60-speed) ease!important;
+}
+body.ak29-glass.ak33-editorial :is(.nav.active,.mobile-nav button.active,.ak31-settings-navbtn.active){
+  background:linear-gradient(115deg,rgba(158,124,244,.25),rgba(131,110,225,.13))!important;
+  border-color:rgba(164,134,244,.25)!important;
+  box-shadow:inset 3px 0 0 rgba(172,142,255,.78),0 4px 20px rgba(107,73,203,.09)!important;
+}
+/* Major surfaces across all pages; nested receipt paper is explicitly excluded. */
+body.ak29-glass.ak33-editorial #content :is(
+  .card,.metric,.ak32-settings-card,.ak39-experience-card,.ak31-settings-rail,
+  .ak31-settings-main,.ak29-browser-panel,.pos-browser,.pos-checkout,
+  .ak29-pos-browser,.ak29-pos-checkout,.ak46-config,.ak46-result,
+  .ak52-editor-shell,.ak52-menubar,.ak46-result,.ak46-stage-wrapper,
+  .ap24-card,.v16-template-card,.v16-directory-card,.v16-product-card
+),
+body.ak29-glass.ak33-editorial .ak39-modal,
+body.ak29-glass.ak33-editorial #modalback .modal {
+  background:var(--v60-glass)!important;
+  border-color:var(--v60-glass-edge)!important;
+  -webkit-backdrop-filter:blur(14px) saturate(150%)!important;
+  backdrop-filter:blur(14px) saturate(150%)!important;
+  box-shadow:inset 0 1px 0 var(--v60-glass-highlight),0 12px 32px rgba(10,8,24,.095)!important;
+}
+/* Forms, catalog chips, menu popups, search surfaces and item rows. */
+body.ak29-glass.ak33-editorial #content :is(
+  .pos-product-card,.pos-product,.catalogitem,.product-card,.ak29-category-chip,
+  .ak29-category-chips button,.ak52-toolnav,.ak52-tool-panel,
+  .ak46-group,.ak49-primary-group,.ak46-note,.v18-customer-search,
+  .ak32-pane,.v15-settings-accordions details
+) {
+  border-color:var(--v60-glass-edge)!important;
+}
+body.ak29-glass.ak33-editorial #content :is(.pos-product-card,.pos-product,.catalogitem,.product-card,.ak46-note),
+body.ak29-glass.ak33-editorial .ak52-menu-popup,
+body.ak29-glass.ak33-editorial .ak39-context-menu {
+  background:var(--v60-glass-raised)!important;
+  -webkit-backdrop-filter:blur(9px) saturate(130%)!important;
+  backdrop-filter:blur(9px) saturate(130%)!important;
+  box-shadow:inset 0 1px 0 var(--v60-glass-highlight),0 6px 20px rgba(12,10,30,.08)!important;
+}
+body.ak29-glass.ak33-editorial #content :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea),
+body.ak29-glass.ak33-editorial .ak29-global-search,
+body.ak29-glass.ak33-editorial .ak39-modal :is(input,select,textarea) {
+  border-color:var(--v60-glass-edge)!important;
+  transition:border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease!important;
+}
+body.ak29-glass.ak33-editorial #content :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea):focus,
+body.ak29-glass.ak33-editorial .ak39-modal :is(input,select,textarea):focus {
+  border-color:rgba(181,149,255,.75)!important;
+  box-shadow:0 0 0 3px rgba(146,107,238,.18),0 0 22px rgba(148,105,231,.09)!important;
+}
+/* Consistent navigation buttons and editor tools. */
+body.ak29-glass.ak33-editorial #content :is(button,.ak52-toolnav button,.ak52-menubar button),
+body.ak29-glass.ak33-editorial .top-actions button,
+body.ak29-glass.ak33-editorial .mobile-nav button,
+body.ak29-glass.ak33-editorial #v57BillBar button {
+  transition:transform 240ms var(--v60-ease),box-shadow 240ms ease,border-color 240ms ease,background-color 240ms ease,filter 240ms ease!important;
+}
+body.ak29-glass.ak33-editorial #content button:focus-visible,
+body.ak29-glass.ak33-editorial .top-actions button:focus-visible {outline:2px solid #b89afa!important;outline-offset:3px}
+body.ak29-glass.ak33-editorial #content :is(.amber,.primary-save,.ak46-primary,.ak52-strong),
+body.ak29-glass.ak33-editorial #v57BillBar button {
+  box-shadow:0 5px 20px rgba(133,100,231,.18),inset 0 1px 0 rgba(255,255,255,.18)!important;
+}
+/* Never animate receipt canvas, label canvas or barcode pattern. */
+body.ak29-glass.ak33-editorial #content :is(.ak46-thermal,.ak46-sheet,.ak46-sheet *,.ak46-stage canvas,.tp-preview-card canvas,#printInvoice,#printInvoice *,#ak46ReceiptCanvas){
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
+/* Overlay chrome; overlay blur stops at the dialog, not on the receipt itself. */
+body.ak29-glass.ak33-editorial #modalback,
+body.ak29-glass.ak33-editorial .ak39-backdrop,
+body.ak29-glass.ak33-editorial .ak46-helpback {
+  -webkit-backdrop-filter:blur(12px) saturate(116%)!important;
+  backdrop-filter:blur(12px) saturate(116%)!important;
+}
+body.ak29-glass.ak33-editorial #v57BillSheet,
+body.ak29-glass.ak33-editorial .ak39-modal,
+body.ak29-glass.ak33-editorial .ak46-helpmodal,
+body.ak29-glass.ak33-editorial .akaora-auth-dialog {
+  border:1px solid var(--v60-glass-edge)!important;
+  box-shadow:0 25px 85px rgba(6,5,19,.4),inset 0 1px 0 var(--v60-glass-highlight)!important;
+}
+/* Every animation is behind the existing Animations toggle. */
+@keyframes v60-aura {0%{background-position:0% 30%}100%{background-position:95% 78%}}
+@keyframes v60-arrive {from{opacity:0;transform:translate3d(0,13px,0) scale(.985)}to{opacity:1;transform:translate3d(0,0,0) scale(1)}}
+@keyframes v60-menu {from{opacity:0;transform:translate3d(0,-9px,0) scale(.98)}to{opacity:1;transform:translate3d(0,0,0) scale(1)}}
+@keyframes v60-modal {from{opacity:.15;transform:translate3d(0,16px,0) scale(.975)}to{opacity:1;transform:translate3d(0,0,0) scale(1)}}
+@keyframes v60-gleam {0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}
+@keyframes v60-kpi {from{transform:scaleY(.05)}to{transform:scaleY(1)}}
+@keyframes v60-dot {0%,100%{box-shadow:0 0 0 0 rgba(41,216,149,.20)}50%{box-shadow:0 0 0 7px rgba(41,216,149,0)}}
+body.ak29-glass.ak33-editorial.ak39-motion:not(.reduce-motion):not([data-ak39-motion="off"]) #root::before {animation:v60-aura 25s ease-in-out infinite alternate}
+body.ak29-glass.ak33-editorial.ak39-motion:not(.reduce-motion):not([data-ak39-motion="off"]) #content .v60-arrive {
+  animation:v60-arrive calc(var(--v60-speed) * 1.2) var(--v60-ease) both!important;
+  animation-delay:var(--v60-delay,0ms)!important;
+}
+body.ak29-glass.ak33-editorial.ak39-motion:not(.reduce-motion):not([data-ak39-motion="off"]) #content .bar {transform-origin:bottom;animation:v60-kpi 720ms var(--v60-ease) both}
+body.ak29-glass.ak33-editorial.ak39-motion:not(.reduce-motion):not([data-ak39-motion="off"]) .ak52-menu-popup:not([hidden]) {animation:v60-menu 240ms var(--v60-ease) both}
+body.ak29-glass.ak33-editorial.ak39-motion:not(.reduce-motion):not([data-ak39-motion="off"]) #modalback[style*="flex"] .modal,
+body.ak29-glass.ak33-editorial.ak39-motion:not(.reduce-motion):not([data-ak39-motion="off"]) .ak39-modal,
+body.ak29-glass.ak33-editorial.ak39-motion:not(.reduce-motion):not([data-ak39-motion="off"]) .akaora-auth-dialog {animation:v60-modal 320ms var(--v60-ease) both}
+body.ak29-glass.ak33-editorial.ak39-motion.ak39-ambient:not(.reduce-motion):not([data-ak39-motion="off"]) .online-dot {animation:v60-dot 2.9s ease-out infinite}
+body.ak29-glass.ak33-editorial.ak39-motion.ak39-ambient:not(.reduce-motion):not([data-ak39-motion="off"]) #content :is(.amber,.primary-save,.ak52-strong):not(:disabled) {animation:v60-gleam 8.5s ease-in-out infinite}
+@media(hover:hover) and (pointer:fine) {
+ body.ak29-glass.ak33-editorial.ak39-motion.ak39-hover:not(.reduce-motion):not([data-ak39-motion="off"]) #content :is(.card,.metric,.pos-product-card,.product-card,.catalogitem,.v16-template-card):hover {
+   transform:translate3d(0,-4px,0)!important;
+   border-color:rgba(169,139,255,.45)!important;
+   box-shadow:0 13px 35px var(--v60-glow),inset 0 1px 0 rgba(255,255,255,.12)!important;
+ }
+ body.ak29-glass.ak33-editorial.ak39-motion.ak39-hover:not(.reduce-motion):not([data-ak39-motion="off"]) #content button:not(:disabled):hover,
+ body.ak29-glass.ak33-editorial.ak39-motion.ak39-hover:not(.reduce-motion):not([data-ak39-motion="off"]) .top-actions button:not(:disabled):hover {
+   transform:translate3d(0,-2px,0)!important;
+   filter:brightness(1.045);
+   box-shadow:0 8px 24px var(--v60-glow)!important;
+ }
+ body.ak29-glass.ak33-editorial.ak39-motion.ak39-hover:not(.reduce-motion):not([data-ak39-motion="off"]) :is(.nav,.ak31-settings-navbtn):not(.active):hover {transform:translate3d(4px,0,0)!important}
+}
+/* Glass preferences: three levels, visually independent of the motion toggle. */
+body.ak29-glass.ak33-editorial.v60-glass-light #content :is(.card,.metric,.pos-browser,.pos-checkout,.ak31-settings-main,.ak52-editor-shell),
+body.ak29-glass.ak33-editorial.v60-glass-light :is(.sidebar,.topbar,.mobile-nav) {-webkit-backdrop-filter:blur(7px)!important;backdrop-filter:blur(7px)!important}
+body.ak29-glass.ak33-editorial.v60-glass-off #content :is(.card,.metric,.pos-browser,.pos-checkout,.ak31-settings-main,.ak52-editor-shell),
+body.ak29-glass.ak33-editorial.v60-glass-off :is(.sidebar,.topbar,.mobile-nav) {-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+body.v60-glass-off #root::before,body.v60-glass-off .main::before {display:none}
+.v60-glass-preference {margin:12px 0 0;padding:14px;border:1px solid var(--v60-glass-edge);border-radius:13px;background:var(--v60-glass-soft)}
+.v60-glass-preference label {display:block;font-size:12px;font-weight:760;margin-bottom:9px}
+.v60-glass-preference select {width:100%;max-width:250px;min-height:40px}
+.v60-glass-preference p {font-size:11px;margin:8px 0 0;opacity:.78;line-height:1.5}
+@media(max-width:740px) {
+ body.ak29-glass.ak33-editorial .topbar,body.ak29-glass.ak33-editorial .mobile-nav {-webkit-backdrop-filter:blur(14px)!important;backdrop-filter:blur(14px)}
+ body.ak29-glass.ak33-editorial #content :is(.card,.metric,.pos-browser,.pos-checkout,.ak52-editor-shell,.ak31-settings-main) {-webkit-backdrop-filter:blur(7px) saturate(120%)!important;backdrop-filter:blur(7px) saturate(120%)}
+ body.ak29-glass.ak33-editorial #content :is(.pos-product-card,.pos-product,.catalogitem,.product-card) {-webkit-backdrop-filter:none;backdrop-filter:none}
+ body.ak29-glass.ak33-editorial #root::before {opacity:.3;animation:none!important}
+ body.ak29-glass.ak33-editorial #content .v60-arrive {animation-duration:220ms!important;animation-delay:0ms!important}
+}
+@media(prefers-reduced-motion:reduce){body.ak29-glass.ak33-editorial *,body.ak29-glass.ak33-editorial *::before,body.ak29-glass.ak33-editorial *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+body.reduce-motion #root::before,body[data-ak39-motion="off"] #root::before {animation:none!important}
+@media print {
+ body.ak29-glass.ak33-editorial #root::before {display:none!important}
+ body.ak29-glass.ak33-editorial *,body.ak29-glass.ak33-editorial *::before,body.ak29-glass.ak33-editorial *::after {
+  animation:none!important;transition:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;text-shadow:none!important;
+ }
+ body.ak29-glass.ak33-editorial :is(.ak46-sheet,.ak46-thermal,#printInvoice) {background:white!important;color:black!important;box-shadow:none!important}
+}
+
+/* Motion disabled by the existing app preference must also stop v60 transitions. */
+body.ak29-glass.ak33-editorial[data-ak39-motion="off"] *,
+body.ak29-glass.ak33-editorial[data-ak39-motion="off"] *::before,
+body.ak29-glass.ak33-editorial[data-ak39-motion="off"] *::after,
+body.ak29-glass.ak33-editorial.reduce-motion *,
+body.ak29-glass.ak33-editorial.reduce-motion *::before,
+body.ak29-glass.ak33-editorial.reduce-motion *::after {animation:none!important;transition:none!important}
+@media(max-width:740px){body.ak29-glass.ak33-editorial .main::before{opacity:.19;animation:none!important}}
+/* Invoices, coupons, stock tables and menus have responsive state feedback. */
+body.ak29-glass.ak33-editorial #content :is(.tablewrap tbody tr,.ak29-chip,.ak46-tabs button,.ak52-toolnav button,.ak52-menu-popup button,.pos-mode-tabs button){transition:background-color 240ms ease,border-color 240ms ease,box-shadow 240ms ease,transform 240ms var(--v60-ease)!important}
+@media(hover:hover) and (pointer:fine){
+ body.ak29-glass.ak33-editorial.ak39-motion.ak39-hover #content .tablewrap tbody tr:hover{background:color-mix(in srgb,#a18bec 8%,transparent)}
+ body.ak29-glass.ak33-editorial.ak39-motion.ak39-hover #content :is(.ak29-chip,.ak46-tabs button,.pos-mode-tabs button):not(:disabled):hover{border-color:rgba(174,143,255,.38)!important;box-shadow:0 4px 17px rgba(140,112,215,.12)}
+}
+
+/* v61 targeted fix — Settings is a page canvas, NOT a giant glass card.
+   The v60 broad surface selector accidentally styled .ak31-settings-main
+   as a filled, shadowed panel behind the heading and individual cards. */
+body.ak29-glass.ak33-editorial #content .ak31-settings-main {
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  padding:0!important;
+}

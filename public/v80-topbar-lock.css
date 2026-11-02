@@ -1,0 +1,41 @@
+/* v80 · topbar lock, consistent with existing dark/light app controls */
+html body .topbar .top-actions .ak80-topbar-lock{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ flex:0 0 auto!important;gap:8px!important;min-height:39px!important;
+ height:39px!important;padding:0 12px!important;
+ border:1px solid var(--ak33-line,#474352)!important;
+ background:var(--ak33-surface2,#292833)!important;
+ color:var(--ak33-ink,#f5f3fb)!important;
+ border-radius:11px!important;box-shadow:none!important;
+ white-space:nowrap!important;font-weight:750!important;font-size:12px!important;
+ transition:border-color .16s ease,background .16s ease!important;
+}
+html body .topbar .top-actions .ak80-topbar-lock:hover{
+ border-color:var(--ak77-accent,#9c7bea)!important;
+ background:var(--ak77-tint,rgba(156,123,234,.14))!important;
+}
+html body .topbar .top-actions .ak80-topbar-lock svg{
+ flex:0 0 17px!important;width:17px!important;height:17px!important;
+ min-width:17px!important;max-width:17px!important;display:block!important;
+}
+html body .topbar .top-actions .ak80-topbar-lock:focus-visible{
+ outline:2px solid var(--ak77-accent,#a98cef)!important;outline-offset:3px!important;
+}
+@media(max-width:1100px){
+ html body .topbar .top-actions .ak80-topbar-lock{width:39px!important;padding:0!important}
+ html body .topbar .top-actions .ak80-topbar-lock .ak80-lock-label{display:none!important}
+}
+@media(max-width:850px){
+ html body.ak29-glass.ak33-editorial .topbar .top-actions .ak80-topbar-lock{
+  display:inline-flex!important;width:36px!important;min-width:36px!important;
+  max-width:36px!important;height:36px!important;min-height:36px!important;padding:0!important;
+  border-radius:11px!important;
+ }
+ /* Mobile has an existing More tab below; don't consume valuable header space twice. */
+ html body.ak29-glass.ak33-editorial .topbar .top-actions .ak76-header-more{display:none!important}
+ html body.ak29-glass.ak33-editorial .topbar .top-actions{gap:4px!important}
+}
+@media(max-width:375px){
+ html body.ak29-glass.ak33-editorial .topbar .top-actions .ak80-topbar-lock{width:32px!important;min-width:32px!important;max-width:32px!important;height:34px!important;min-height:34px!important}
+ html body.ak29-glass.ak33-editorial .topbar .brand.shop-top-brand.ak77-product-identity{max-width:calc(100% - 122px)!important}
+}

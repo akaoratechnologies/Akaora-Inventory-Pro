@@ -1,0 +1,366 @@
+/* Akaora v52 - professional editor workspace: refined layout, consistent controls */
+#content #ak46-settings-pane:has(.ak52-studio){width:100%!important;max-width:none!important;margin:0!important;padding:0!important;min-width:0!important}
+#content #ak46-settings-pane .ak52-studio{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important;min-width:0!important;max-width:none!important;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif!important;color:var(--ak33-ink,var(--text))}
+#content #ak46-settings-pane .ak52-studio .ak46-top{padding:16px 18px 6px!important;display:flex!important;justify-content:space-between;align-items:center;gap:12px!important;border:0!important}
+#content #ak46-settings-pane .ak52-studio .ak46-top h2{font-size:25px!important;font-weight:790!important;line-height:1.17!important;letter-spacing:-.035em!important;margin:0 0 5px!important}
+#content #ak46-settings-pane .ak52-studio .ak46-top p{font-size:12px!important;line-height:1.5!important;color:var(--ak33-muted,var(--muted))!important;margin:0!important}
+#content #ak46-settings-pane .ak52-studio .ak46-top .ak46-toolbar{display:none!important}
+#content #ak46-settings-pane .ak52-menubar{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;padding:8px 11px;background:var(--ak33-surface,#25242d);border:1px solid var(--ak33-line,#44414b);border-radius:15px;min-height:56px;z-index:9}
+#content #ak46-settings-pane .ak52-menu-actions,#content #ak46-settings-pane .ak52-menubar-right{display:flex;align-items:center;gap:4px;flex-wrap:wrap;min-width:0}
+#content #ak46-settings-pane .ak52-menubar button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:37px!important;height:37px!important;padding:0 13px!important;border:0!important;border-radius:10px!important;background:transparent!important;color:var(--ak33-ink,var(--text))!important;font-size:12px!important;font-weight:680!important;letter-spacing:0!important;cursor:pointer;box-shadow:none!important;white-space:nowrap}
+#content #ak46-settings-pane .ak52-menubar button:hover,#content #ak46-settings-pane .ak52-menubar button[aria-expanded=true]{background:color-mix(in srgb,#8e73e8 17%,transparent)!important}
+#content #ak46-settings-pane .ak52-menubar button svg{width:14px!important;height:14px!important;max-width:14px!important;min-width:14px!important;stroke-width:1.85!important;flex:none}
+#content #ak46-settings-pane .ak52-menubar-right .ak52-strong{background:#8366dc!important;color:#fff!important;border:1px solid #9379e4!important;min-width:120px!important}
+#content #ak46-settings-pane .ak52-menubar-right .ak52-strong:hover{background:#7556cf!important}
+#content #ak46-settings-pane .ak52-saved{display:inline-flex;align-items:center;gap:5px;margin:0 12px;font-size:11px;color:var(--ak33-muted,var(--muted));white-space:nowrap}
+#content #ak46-settings-pane .ak52-saved svg{width:14px;height:14px;stroke:#52bb89}
+#content #ak46-settings-pane .ak52-menu-popup{position:absolute;left:10px;top:calc(100% + 5px);min-width:215px;max-width:calc(100vw - 30px);border:1px solid var(--ak33-line,#46444e);border-radius:12px;padding:7px;background:var(--ak33-surface,#25242d);box-shadow:0 22px 55px #0005;z-index:12;display:grid;gap:2px}
+#content #ak46-settings-pane .ak52-menu-popup[hidden]{display:none!important}
+#content #ak46-settings-pane .ak52-menu-popup button{justify-content:flex-start!important;min-height:35px!important;text-align:left!important;padding:0 12px!important;width:100%;font-size:12px!important}
+#content #ak46-settings-pane .ak52-studio .ak46-grid{display:grid!important;grid-template-columns:minmax(420px,510px) minmax(0,1fr)!important;gap:14px!important;align-items:start!important;width:100%!important;max-width:none!important;min-width:0!important}
+#content #ak46-settings-pane .ak52-editor-shell{display:grid;grid-template-columns:116px minmax(0,1fr);gap:0;min-width:0;width:100%;height:calc(100vh - 260px);min-height:590px;max-height:780px;border:1px solid var(--ak33-line,#45434d);border-radius:18px;background:var(--ak33-surface,#25242d);overflow:hidden}
+#content #ak46-settings-pane .ak52-toolnav{display:flex;flex-direction:column;align-items:stretch;gap:5px;padding:12px 8px;background:color-mix(in srgb,var(--ak33-surface2,#2c2b32) 67%,#18171c);border-right:1px solid var(--ak33-line,#45434d)}
+#content #ak46-settings-pane .ak52-toolnav button{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:65px;padding:8px 2px!important;border:1px solid transparent;border-radius:11px;background:transparent!important;color:var(--ak33-muted,#a6a2b3);box-shadow:none!important;cursor:pointer;font-size:10px!important;font-weight:690!important;line-height:1.25;text-align:center;white-space:normal!important}
+#content #ak46-settings-pane .ak52-toolnav button:hover{background:color-mix(in srgb,#8f77e7 13%,transparent)!important;color:var(--ak33-ink,#fff)}
+#content #ak46-settings-pane .ak52-toolnav button.selected{background:color-mix(in srgb,#8f77e7 19%,transparent)!important;border-color:color-mix(in srgb,#a58bf4 36%,transparent)!important;color:#aa94fa!important}
+#content #ak46-settings-pane .ak52-toolnav button svg{width:21px!important;height:21px!important;min-width:21px!important;max-width:21px!important;flex:none}
+#content #ak46-settings-pane .ak52-inspector{min-width:0!important;width:100%;height:100%;overflow-y:auto!important;overflow-x:hidden!important;scrollbar-width:thin;scrollbar-color:#8b7caa70 transparent}
+#content #ak46-settings-pane .ak52-tool-panel{display:grid;align-content:start;gap:12px;padding:20px 19px 24px;min-width:0;width:100%;box-sizing:border-box!important}
+#content #ak46-settings-pane .ak52-tool-panel[hidden]{display:none!important}
+#content #ak46-settings-pane .ak52-section-head{border-bottom:1px solid var(--ak33-line,#45434d);padding:0 0 13px;margin:0 0 1px}
+#content #ak46-settings-pane .ak52-kicker{font-size:9px;letter-spacing:.16em;color:#aa95f1;font-weight:850!important;line-height:1.4}
+#content #ak46-settings-pane .ak52-section-head h3{font-size:19px!important;font-weight:790!important;margin:4px 0 5px!important;letter-spacing:-.03em!important;color:var(--ak33-ink,#fff)}
+#content #ak46-settings-pane .ak52-section-head p{font-size:11px!important;line-height:1.55!important;margin:0;color:var(--ak33-muted,#a6a2b3)}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-accordion{border:0!important;border-radius:0!important;background:transparent!important;margin:0!important;overflow:visible!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-accordion>summary{display:none!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-accordion-inner{display:grid!important;gap:12px!important;padding:0!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-primary-group{border:0!important;padding:0!important;margin:0!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-primary-group>h3{display:none!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-field label{font-size:11px!important;font-weight:640!important;color:var(--ak33-muted,var(--muted));margin-bottom:7px!important}
+#content #ak46-settings-pane .ak52-tool-panel input:not([type=checkbox]):not([type=radio]):not([type=range]),#content #ak46-settings-pane .ak52-tool-panel textarea,#content #ak46-settings-pane .ak52-tool-panel select{width:100%;max-width:100%;min-height:41px!important;height:auto!important;box-sizing:border-box!important;background:var(--ak33-surface2,#2c2b34)!important;border:1px solid var(--ak33-line,#46434c)!important;border-radius:10px!important;color:var(--ak33-ink,#fff)!important;padding:9px 11px!important;font-size:12px!important;box-shadow:none!important}
+#content #ak46-settings-pane .ak52-tool-panel input:focus-visible,#content #ak46-settings-pane .ak52-tool-panel select:focus-visible,#content #ak46-settings-pane .ak52-tool-panel textarea:focus-visible{outline:2px solid #9378ea!important;outline-offset:1px}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-mode-selector{grid-template-columns:1fr 1fr!important;gap:7px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-mode{min-height:78px!important;padding:10px!important;gap:4px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-mode strong{font-size:11px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak49-mode small{font-size:9px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak50-align-options{grid-template-columns:1fr 1fr!important;gap:8px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-cols{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-check{display:flex!important;align-items:center;gap:7px!important;line-height:1.35!important;padding:7px 9px!important;font-size:10px!important;min-height:34px;background:var(--ak33-surface2,#2d2b34);border:1px solid var(--ak33-line,#484550);border-radius:10px}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-check input{flex:0 0 15px;width:15px!important;height:15px!important;margin:0!important;accent-color:#9778ea!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak51-extra-controls{margin-top:0!important;padding-top:7px!important;gap:11px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak50-logo-settings{padding:12px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-sections{display:grid;gap:7px}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-section{min-width:0;padding:10px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-section svg{width:15px!important;height:15px!important}
+#content #ak46-settings-pane .ak52-tool-panel .ak46-help{font-size:10px!important;line-height:1.55!important}
+#content #ak46-settings-pane .ak52-upi-field{display:grid;gap:7px;padding-top:12px;border-top:1px solid var(--ak33-line,#494652)}
+#content #ak46-settings-pane .ak52-upi-field>label{font-size:11px;font-weight:720}
+#content #ak46-settings-pane .ak52-studio .ak49-preview-panel{position:sticky!important;top:82px!important;height:calc(100vh - 260px);max-height:780px!important;min-height:590px;overflow:hidden!important;padding:17px!important;border-radius:18px!important;display:flex!important;flex-direction:column!important;gap:9px!important;min-width:0!important}
+#content #ak46-settings-pane .ak52-preview-top{display:flex;justify-content:space-between;align-items:center;gap:12px;min-width:0}
+#content #ak46-settings-pane .ak52-preview-top h3{font-size:17px!important;font-weight:810!important;letter-spacing:-.02em!important;margin:3px 0!important}
+#content #ak46-settings-pane .ak52-preview-top p{font-size:10px;line-height:1.5;margin:0;color:var(--ak33-muted,#aaa)}
+#content #ak46-settings-pane .ak52-preview-badge{display:inline-flex;align-items:center;gap:5px;border-radius:100px;border:1px solid var(--ak33-line,#444);padding:5px 9px;font-size:9px;font-weight:850;white-space:nowrap;color:#9c85eb}
+#content #ak46-settings-pane .ak52-preview-badge svg{width:14px;height:14px}
+#content #ak46-settings-pane .ak50-demo-row{margin:2px 0!important;grid-template-columns:110px minmax(0,1fr);align-items:center;gap:9px!important}
+#content #ak46-settings-pane .ak50-demo-row label{font-size:11px!important;color:var(--ak33-muted,#aaa)!important}
+#content #ak46-settings-pane .ak50-demo-row select{font-size:12px!important;min-height:38px!important;background:var(--ak33-surface2,#2d2b34)!important;border-color:var(--ak33-line,#484550)!important;color:var(--ak33-ink,#fff)!important}
+#content #ak46-settings-pane .ak52-studio .ak46-tabs{max-width:100%!important;margin:2px 0!important}
+#content #ak46-settings-pane .ak52-studio .ak46-tabs button{min-height:36px!important;height:36px!important;font-size:11px!important;padding:6px 12px!important}
+#content #ak46-settings-pane .ak52-studio .ak52-preview-stage{flex:1!important;min-height:200px!important;max-height:none!important;overflow:auto!important;padding:16px!important;display:flex!important;align-items:flex-start!important;justify-content:center!important;background:#e6e4ee!important;border:1px solid #d3d0df!important;border-radius:13px!important}
+#content #ak46-settings-pane .ak52-preview-stage #ak46-preview{display:block!important;width:100%!important;min-width:0!important;max-width:100%!important}
+#content #ak46-settings-pane .ak52-studio .ak46-note{font-size:10px;line-height:1.45;margin:3px 0!important;color:var(--ak33-muted,#aaa)}
+#content #ak46-settings-pane .ak52-printactions{display:flex!important;gap:8px!important;justify-content:flex-end!important;margin:4px 0 0!important}
+#content #ak46-settings-pane .ak52-printactions button{flex:1!important;min-width:0!important;min-height:42px!important;height:42px!important;font-size:11px!important;border-radius:11px!important;white-space:nowrap!important}
+#content #ak46-settings-pane .ak52-preview-only .ak46-grid{grid-template-columns:minmax(0,1fr)!important}
+#content #ak46-settings-pane .ak52-preview-only .ak52-editor-shell{display:none!important}
+#content #ak46-settings-pane .ak52-preview-only .ak49-preview-panel{height:calc(100vh - 250px)!important;max-height:none!important}
+#content .ak52-settings-handoff{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:15px 17px;margin:14px 0 22px;background:var(--ak33-surface2,#282731);border:1px solid var(--ak33-line,#45434d);border-radius:16px;color:var(--ak33-ink,var(--text))}
+#content .ak52-settings-handoff .ak52-settings-mark{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,#9274e5 18%,transparent);color:#aa92ef}
+#content .ak52-settings-handoff .ak52-settings-mark svg{width:22px!important;height:22px!important}
+#content .ak52-settings-handoff>div:nth-child(2){flex:1;min-width:200px}
+#content .ak52-settings-handoff strong{font-size:14px;font-weight:790}
+#content .ak52-settings-handoff p{font-size:11px;line-height:1.5;color:var(--ak33-muted,var(--muted));margin:5px 0 0}
+#content .ak52-settings-handoff button{min-height:40px!important;border-radius:10px!important}
+@media(max-width:1180px){#content #ak46-settings-pane .ak52-studio .ak46-grid{grid-template-columns:minmax(0,1fr)!important}#content #ak46-settings-pane .ak52-editor-shell{height:590px;max-height:none;min-height:0}#content #ak46-settings-pane .ak49-preview-panel{height:750px!important;position:relative!important;top:auto!important;max-height:none!important}}
+@media(max-width:650px){#content #ak46-settings-pane .ak52-studio .ak46-top{padding:10px 4px 5px!important}#content #ak46-settings-pane .ak52-menubar{padding:8px!important;gap:6px!important}#content #ak46-settings-pane .ak52-menu-actions{width:100%;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:2px!important}#content #ak46-settings-pane .ak52-menu-actions button{width:100%!important;min-width:0!important;padding:0 2px!important;font-size:10px!important;gap:3px!important}#content #ak46-settings-pane .ak52-menu-actions button svg{width:10px!important;height:10px!important;min-width:10px!important}#content #ak46-settings-pane .ak52-menubar-right{width:100%;justify-content:space-between}#content #ak46-settings-pane .ak52-saved{margin:0 7px!important}#content #ak46-settings-pane .ak52-studio .ak46-grid{gap:10px!important}#content #ak46-settings-pane .ak52-editor-shell{display:flex!important;flex-direction:column!important;height:auto;max-height:none;min-height:0}#content #ak46-settings-pane .ak52-toolnav{display:flex!important;flex-direction:row!important;overflow-x:auto!important;min-height:68px!important;gap:4px!important;padding:6px!important;border-right:0;border-bottom:1px solid var(--ak33-line,#494652);scrollbar-width:thin}#content #ak46-settings-pane .ak52-toolnav button{flex:0 0 76px!important;min-width:76px!important;min-height:55px!important;gap:4px!important;padding:5px!important;font-size:9px!important}#content #ak46-settings-pane .ak52-toolnav button svg{width:17px!important;height:17px!important;min-width:17px!important}#content #ak46-settings-pane .ak52-inspector{overflow:visible!important;height:auto;min-height:0}#content #ak46-settings-pane .ak52-tool-panel{padding:16px 13px 18px!important}#content #ak46-settings-pane .ak52-tool-panel .ak49-mode-selector,#content #ak46-settings-pane .ak52-tool-panel .ak50-align-options{grid-template-columns:minmax(0,1fr)!important}#content #ak46-settings-pane .ak52-tool-panel .ak46-cols{grid-template-columns:repeat(2,minmax(0,1fr))!important}#content #ak46-settings-pane .ak49-preview-panel{height:620px!important;padding:13px!important}#content #ak46-settings-pane .ak52-preview-stage{padding:9px!important;min-height:200px!important}#content #ak46-settings-pane .ak50-demo-row{grid-template-columns:1fr!important;gap:5px!important}#content #ak46-settings-pane .ak52-preview-only .ak52-editor-shell{display:none!important}#content #ak46-settings-pane .ak52-printactions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}#content .ak52-settings-handoff button{width:100%!important}}
+
+/* On phones, put the live proof of layout above the inspector to avoid an endless settings wall. */
+@media(max-width:650px){
+ #content #ak46-settings-pane .ak52-studio .ak46-grid .ak49-preview-panel{order:-1!important;height:500px!important;max-height:none!important}
+ #content #ak46-settings-pane .ak52-studio .ak46-grid .ak52-editor-shell{order:1!important}
+ #content #ak46-settings-pane .ak52-studio .ak52-preview-stage{min-height:170px!important}
+}
+
+/* v53 receipt preview: match native ESC/POS emphasis and spacing. */
+.ak53-native-preview{font-family:monospace!important;font-size:12px!important;line-height:1.35!important;white-space:pre!important;background:#fff!important;color:#111!important;max-width:100%!important;box-sizing:content-box!important;overflow:visible!important;}
+.ak53-native-preview>div{min-height:1.35em;white-space:pre;}
+.ak53-native-preview>.ak53-emphasis-line{font-size:2em!important;line-height:1.28!important;font-weight:900!important;letter-spacing:-.035em!important;}
+@media(max-width:600px){.ak53-native-preview{font-size:10px!important}}
+
+.ak53-native-preview>.ak53-emphasis-tall{font-size:1.5em!important;line-height:1.55!important;font-weight:900!important;letter-spacing:-.012em!important}
+
+/* v54 UPI QR invoice controls */
+.ak54-upi-settings{display:grid;gap:10px;padding:14px;border:1px solid var(--ak33-line,#383844);border-radius:12px;background:var(--ak33-surface2,#24242c)}.ak54-upi-settings h4{margin:0;font-size:14px}.ak54-upi-settings input,.ak54-upi-settings select{max-width:100%;width:100%;min-width:0}.ak54-upi-settings .ak54-inline-check{display:flex;align-items:center;gap:9px;font-weight:600}.ak54-upi-settings .ak54-inline-check input{width:17px;height:17px;flex:none}.ak54-upi-warning{font-size:12px;color:#e8b257;margin:8px 0 0}.ak54-upi-warning[hidden]{display:none}
+
+/* V54: immutable invoice branding, printed after all custom sections */
+.ak54-fixed-brand{margin-top:20px;padding:12px 8px 2px;border-top:1px solid #c6c8ce;color:#333!important;text-align:center;font-size:11px;font-weight:700;letter-spacing:.01em;white-space:normal;overflow-wrap:break-word;}
+.ak54-upi-settings{display:grid;gap:10px;padding:14px;border:1px solid var(--ak33-line,#383844);border-radius:12px;background:var(--ak33-surface2,#24242c)}
+.ak54-upi-settings h4{margin:0;font-size:14px}
+.ak54-upi-settings input,.ak54-upi-settings select{max-width:100%;width:100%;min-width:0}
+.ak54-upi-settings .ak54-inline-check{display:flex;align-items:center;gap:9px;font-weight:600}.ak54-upi-settings .ak54-inline-check input{width:17px;height:17px;flex:none}
+.ak54-upi-warning{font-size:12px;color:#e8b257;margin:8px 0 0}.ak54-upi-warning[hidden]{display:none}
+
+/* v55: bill/KOT document switch and focused kitchen preview */
+.ak55-document-switch{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:5px;margin:4px 0 12px;background:var(--ak33-surface2,#25252f);border:1px solid var(--ak33-line,#3c3c4b);border-radius:13px}
+.ak55-document-switch button{display:flex;justify-content:center;align-items:center;gap:9px;border:0;background:transparent;color:var(--ak33-muted,#a6a9bb);padding:12px 10px;border-radius:9px;font-weight:750;cursor:pointer}
+.ak55-document-switch button[aria-pressed="true"]{background:#7554ca;color:white;box-shadow:0 3px 12px #35235d33}
+.ak55-document-switch svg{width:18px!important;height:18px!important;flex:none}
+.ak55-kot-sheet{color:#111;background:white;max-width:790px;width:100%;margin:auto;padding:28px;box-shadow:0 10px 30px #0002}
+.ak55-kot-sheet .ak55-kot-heading{text-align:center;font-size:22px;font-weight:900;letter-spacing:.02em}
+.ak55-kot-sheet h2,.ak55-kot-sheet p{text-align:center;color:#111;margin:9px 0}
+.ak55-kot-sheet .ak55-kot-meta{display:flex;gap:18px;justify-content:center;margin:16px 0;padding:14px 0;border-block:1px dashed #bbb}
+.ak55-kot-sheet .ak55-kot-meta div{min-width:120px}.ak55-kot-sheet .ak55-kot-meta b{display:block;font-size:11px;text-transform:uppercase;margin-bottom:6px}
+.ak55-kot-sheet table{width:100%;border-collapse:collapse;color:#111}.ak55-kot-sheet th,.ak55-kot-sheet td{padding:12px 8px;border-bottom:1px solid #ccc;text-align:left;font-size:14px}.ak55-kot-sheet th:last-child,.ak55-kot-sheet td:last-child{text-align:right}
+.ak55-kot-sheet .ak55-kot-note{padding:14px;background:#f3f4f7;margin-top:15px}.ak55-kot-sheet .ak55-kot-note p{text-align:left}.ak55-kot-sheet .ak55-kot-end{text-align:center;padding:16px;border-top:1px dashed #bbb;margin-top:18px;font-weight:750}
+.ak55-kot-text .ak55-kot-bold{font-weight:900}.ak55-kot-text{background:white;color:#111!important;overflow:visible}
+.ak55-kot-backdrop{position:fixed;inset:0;background:#000a;z-index:999999;display:grid;place-items:center;padding:14px}.ak55-kot-modal{background:var(--ak33-surface,#23232e);color:var(--ak33-ink,#fff);border:1px solid var(--ak33-line,#4a4a58);border-radius:18px;width:min(540px,100%);max-height:95dvh;display:flex;flex-direction:column;overflow:hidden}
+.ak55-kot-modal-head{display:flex;justify-content:space-between;align-items:center;padding:15px 17px;border-bottom:1px solid #8884}.ak55-kot-modal-head b,.ak55-kot-modal-head small{display:block}.ak55-kot-modal-head small{opacity:.7;font-size:12px;margin-top:3px}.ak55-kot-modal-head button{background:none;color:inherit;border:0;font-size:23px;cursor:pointer}.ak55-kot-modal-paper{background:#e9e8ed;min-height:160px;overflow-y:auto;padding:18px;display:grid;place-items:start center}.ak55-kot-modal-actions{display:flex;justify-content:flex-end;gap:8px;padding:14px;border-top:1px solid #8884}
+@media(max-width:480px){.ak55-document-switch button{font-size:12px;padding:10px 6px;gap:5px}.ak55-kot-sheet{padding:18px 12px}.ak55-kot-sheet .ak55-kot-meta{flex-direction:column;gap:10px}.ak55-kot-modal-actions button{flex:1}}
+
+/* -------------------------------------------------------------------------
+   v56 responsive repair: v49/v52 rules had mismatched specificity, leaving
+   preview position:sticky + min-height:590px even at 320px. The truncated
+   preview was then painted across the inspector controls on mobile.
+   Limit overrides to the Studio; never change printable receipt geometry.
+   ------------------------------------------------------------------------- */
+@media (max-width: 1180px) {
+  #content #ak46-settings-pane .ak52-studio .ak46-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    min-width: 0 !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak46-grid > .ak49-preview-panel,
+  #content #ak46-settings-pane .ak52-studio .ak49-preview-panel {
+    order: 0 !important;
+    position: static !important;
+    inset: auto !important;
+    top: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    box-sizing: border-box !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-editor-shell {
+    order: 1 !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-height: none !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-preview-stage {
+    flex: none !important;
+    height: min(58dvh, 550px) !important;
+    min-height: 310px !important;
+    max-height: 550px !important;
+    overflow: auto !important;
+    overscroll-behavior: contain;
+  }
+  #content #ak46-settings-pane .ak52-preview-only .ak49-preview-panel {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 650px) {
+  html, body { max-width: 100%; }
+  html body.ak29-glass.ak33-editorial #content:has(.ak52-studio) {
+    padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right)) !important;
+    min-width: 0 !important;
+    overflow-x: clip !important;
+    padding-bottom: calc(84px + env(safe-area-inset-bottom)) !important;
+  }
+  #content #ak46-settings-pane .ak52-studio {
+    width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    overflow: visible !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak46-grid {
+    width: 100% !important;
+    min-width: 0 !important;
+    gap: 12px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak46-grid > .ak49-preview-panel {
+    order: 0 !important;
+    position: static !important;
+    top: auto !important;
+    transform: none !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 14px 12px !important;
+    gap: 11px !important;
+    border-radius: 14px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak46-grid > .ak52-editor-shell {
+    order: 1 !important;
+    position: static !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-preview-stage {
+    display: flex !important;
+    height: clamp(300px, 52dvh, 490px) !important;
+    min-height: 300px !important;
+    max-height: 490px !important;
+    padding: 10px 7px !important;
+    overflow: auto !important;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+  #content #ak46-settings-pane .ak52-studio #ak46-preview {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak55-document-switch {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    box-sizing: border-box !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak55-document-switch button {
+    white-space: normal !important;
+    min-width: 0 !important;
+    min-height: 45px !important;
+    padding: 8px 5px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak46-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak46-tabs button {
+    min-width: 0 !important;
+    min-height: 42px !important;
+    padding: 7px 5px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak50-demo-row,
+  #content #ak46-settings-pane .ak52-studio .ak50-demo-row select {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-editor-shell .ak52-toolnav {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-toolnav button {
+    scroll-snap-align: start;
+    min-height: 57px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-inspector,
+  #content #ak46-settings-pane .ak52-studio .ak52-tool-panel {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-tool-panel .ak46-cols,
+  #content #ak46-settings-pane .ak52-studio .ak52-tool-panel .ak50-align-options {
+    display: grid !important;
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    gap: 10px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-tool-panel .ak49-mode-selector {
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-tool-panel select,
+  #content #ak46-settings-pane .ak52-studio .ak52-tool-panel input {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-menubar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    position: relative !important;
+    z-index: 5;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-menu-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(5,minmax(0,1fr)) !important;
+    gap: 2px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-menu-actions button {
+    min-width: 0 !important;
+    padding-inline: 1px !important;
+    font-size: 10px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-menubar-right {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-printactions {
+    display: grid !important;
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    gap: 8px !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-printactions button {
+    min-width: 0 !important;
+    width: 100% !important;
+    white-space: normal !important;
+  }
+  /* keep browser/other pages' fixed bottom navigation clear of Studio controls */
+  #content #ak46-settings-pane .ak52-studio .ak52-menu-popup {
+    max-width: min(270px, calc(100vw - 24px)) !important;
+    z-index: 12 !important;
+  }
+}
+@media (max-width: 355px) {
+  #content #ak46-settings-pane .ak52-studio .ak52-tool-panel .ak46-cols,
+  #content #ak46-settings-pane .ak52-studio .ak52-tool-panel .ak50-align-options {
+    grid-template-columns: minmax(0,1fr) !important;
+  }
+  #content #ak46-settings-pane .ak52-studio .ak52-printactions {
+    grid-template-columns: minmax(0,1fr) !important;
+  }
+}
+/* Mobile SPA route changes should land immediately at the new page's top,
+   not animate the old document scroll behind the fixed top navigation. */
+@media (max-width:650px) {
+  html { scroll-behavior: auto !important; }
+}
+
+/* v72 paper saving + KOT price options */
+#content #ak46-settings-pane .ak72-paper-saver{border:1px solid color-mix(in srgb,#a58cf4 38%,var(--ak33-line,#444));background:color-mix(in srgb,#9375e8 8%,transparent);padding:14px;border-radius:14px;margin-top:16px;display:grid;gap:8px}
+#content #ak46-settings-pane .ak72-paper-saver strong{font-size:13px;color:var(--ak33-ink,#f8f7ff)}
+#content #ak46-settings-pane .ak72-paper-saver select{width:100%;min-height:44px;border-radius:10px}
+#content #ak46-settings-pane .ak72-paper-saver p{font-size:11px;line-height:1.5;margin:0;color:var(--ak33-muted,#aaa)}
+#content #ak46-settings-pane .ak72-kot-options{margin:10px 0 14px;padding:14px;border-radius:13px;background:color-mix(in srgb,#997cea 8%,var(--ak33-surface2,#292832));border:1px solid color-mix(in srgb,#9f86ea 32%,var(--ak33-line,#444))}
+#content #ak46-settings-pane .ak72-kot-options[hidden]{display:none!important}
+#content #ak46-settings-pane .ak72-toggle{display:flex;align-items:center;gap:12px;cursor:pointer}
+#content #ak46-settings-pane .ak72-toggle input{width:19px!important;height:19px!important;min-width:19px!important;accent-color:#997aee;cursor:pointer}
+#content #ak46-settings-pane .ak72-toggle span{display:grid;gap:4px;line-height:1.35}
+#content #ak46-settings-pane .ak72-toggle strong{font-size:13px}
+#content #ak46-settings-pane .ak72-toggle small{font-size:11px;color:var(--ak33-muted,#aaa)}

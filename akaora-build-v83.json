@@ -1,0 +1,6 @@
+{
+  "app": "Akaora Inventory Pro",
+  "version": "83.0.0",
+  "release": "v83-no-barcode-studio",
+  "deployment": "github-actions-firebase-hosting"
+}

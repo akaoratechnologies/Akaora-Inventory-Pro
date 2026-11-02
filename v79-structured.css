@@ -1,0 +1,131 @@
+/* v78: clear hierarchy and consistent spacing, preserving existing functional controls. */
+body.ak29-glass.ak33-editorial #content{--ak78-gap:14px;min-width:0}
+body.ak29-glass.ak33-editorial #content :is(button,select,input,textarea):focus-visible,
+body.ak29-glass.ak33-editorial .ak77-more-panel :is(button,input):focus-visible{outline:2px solid var(--ak77-accent,#9678ee)!important;outline-offset:2px}
+/* KPI section, compact high-contrast hierarchy */
+#content.ak78-home{display:flex;flex-direction:column;gap:0;}
+#content.ak78-home>.ak78-overview{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:5px 0 16px;margin-bottom:4px;border-bottom:1px solid var(--ak33-line,#363640)}
+#content .ak78-title-stack{min-width:0}
+#content .ak78-kicker,#content .ak78-section-kicker{color:var(--ak77-accent,#a98df3);font-size:10px;letter-spacing:.105em;font-weight:850}
+#content .ak78-title-stack h1{font-size:clamp(23px,2.3vw,32px);margin:4px 0;line-height:1.1;letter-spacing:-.04em;color:var(--ak33-ink,#fff)}
+#content .ak78-title-stack p{font-size:12px;color:var(--ak33-muted,#aaa);margin:5px 0 0;line-height:1.4}
+#content .ak78-new-bill{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;min-height:42px;border:1px solid var(--ak77-deep);border-radius:12px;background:var(--ak77-deep);color:#fff;font-size:12px;font-weight:750;white-space:nowrap;flex:none;cursor:pointer}
+#content .ak78-new-bill svg{width:17px;height:17px;flex:none}
+#content .ak78-section-heading{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:18px 0 12px;min-width:0}
+#content .ak78-section-heading h2{font-size:17px;line-height:1.25;color:var(--ak33-ink,#fff);letter-spacing:-.025em;margin:4px 0 0;font-weight:780}
+#content .ak78-section-note{font-size:11px;color:var(--ak33-muted,#a5a5ac)}
+html body.ak29-glass.ak33-editorial #content .ak78-kpi-section .grid.metrics,
+html body.ak29-glass.ak33-editorial #content .ak78-more-stats .grid.metrics{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin:0!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important}
+html body.ak29-glass.ak33-editorial #content .ak78-kpi-section .grid.metrics>.card.metric,
+html body.ak29-glass.ak33-editorial #content .ak78-more-stats .grid.metrics>.card.metric{min-height:126px!important;margin:0!important;padding:17px!important;border-radius:16px!important;display:flex;flex-direction:column;justify-content:space-between;gap:7px;background:var(--ak33-surface,#20202a)!important;border:1px solid var(--ak33-line,#383840)!important;box-shadow:none!important}
+#content .ak78-kpi-section .metric-value,#content .ak78-more-stats .metric-value{font-size:clamp(19px,1.7vw,26px)!important;line-height:1.15!important;font-variant-numeric:tabular-nums;font-weight:800;letter-spacing:-.028em;margin:2px 0}
+#content .ak78-kpi-section .metricrow,#content .ak78-more-stats .metricrow{gap:6px!important;align-items:flex-start}
+#content .ak78-kpi-section .metric-label,#content .ak78-more-stats .metric-label{font-size:12px!important;line-height:1.32!important;font-weight:720}
+#content .ak78-kpi-section .metric-note,#content .ak78-more-stats .metric-note{font-size:10px!important;line-height:1.35!important;max-width:100%;color:var(--ak33-muted,#aaa)}
+#content .ak78-more-stats{margin-top:12px;border:1px solid var(--ak33-line,#35353c);border-radius:15px;overflow:hidden;background:var(--ak33-surface,#22222b)}
+#content .ak78-more-stats summary{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 15px;cursor:pointer;list-style:none;color:var(--ak33-ink,#fff);font-size:12px;font-weight:740}
+#content .ak78-more-stats summary::-webkit-details-marker{display:none}
+#content .ak78-more-stats summary>span{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#content .ak78-more-stats summary small{font-size:11px;font-weight:450;color:var(--ak33-muted,#aaa)}
+#content .ak78-more-stats summary svg{width:17px;height:17px;flex:none;color:var(--ak77-accent,#ad91ff)}
+#content .ak78-more-stats[open] summary>svg{transform:rotate(180deg)}
+#content .ak78-more-stats .ak78-other-grid{padding:0 12px 12px!important}
+#content .ak78-trend-grid{align-items:stretch;gap:12px!important;margin:0!important}
+#content .ak78-trend-grid>.card{min-width:0;border-radius:16px!important;padding:17px!important;overflow:hidden}
+#content .ak78-trend-grid>.card>h3{font-size:15px!important;line-height:1.3;margin:0 0 11px!important}
+#content .ak78-recent{border-radius:16px!important;margin-top:16px!important;padding:17px!important;overflow:hidden}
+#content .ak78-recent>h3{font-size:16px!important;margin:7px 0 12px!important}
+#content .ak78-recent .tablewrap{overflow-x:auto;max-width:100%;border-radius:12px}
+#content .ak78-recent table{min-width:0;width:100%;font-size:12px}
+#content>.ak77-home-last.ak78-bottom-tools{padding:14px 0 0;margin:20px 0 36px!important;border-top:1px solid var(--ak33-line,#34343a)}
+#content>.ak77-home-last.ak78-bottom-tools .heading{background:var(--ak33-surface,#20202a)!important;border:1px solid var(--ak33-line,#35353c)!important;border-radius:17px!important;padding:16px!important;box-shadow:none!important}
+#content>.ak77-home-last.ak78-bottom-tools .heading h1{font-size:clamp(19px,2.1vw,23px)!important;line-height:1.2!important;margin:6px 0!important;letter-spacing:-.035em!important}
+#content>.ak77-home-last.ak78-bottom-tools .heading p{font-size:11px!important;line-height:1.45!important}
+#content>.ak77-home-last.ak78-bottom-tools .heading .ak33-eyebrow{font-size:10px!important;letter-spacing:.1em!important}
+#content>.ak77-home-last.ak78-bottom-tools .heading .actions button{font-size:12px!important;min-height:42px!important;border-radius:12px!important;padding:9px 12px!important}
+/* More categories with tool search: content hidden only by user-filter selection. */
+.ak77-more-panel .ak78-menu-search-label{display:block;font-size:11px;color:var(--ak33-muted,#aeb0bc);font-weight:750;margin-bottom:6px}
+.ak77-more-panel .ak78-menu-search{width:100%;min-height:43px;box-sizing:border-box;color:var(--ak33-ink,#fff);border:1px solid var(--ak33-line,#444);border-radius:12px;background:var(--ak33-surface2,#292935);padding:10px 12px;font-size:13px;outline:none}
+.ak77-more-panel .ak78-menu-search:focus{border-color:var(--ak77-accent)!important}
+.ak77-more-panel .ak78-menu-group{margin-top:12px}
+.ak77-more-panel .ak78-menu-empty{padding:14px;text-align:center;font-size:12px;color:var(--ak33-muted,#aaa)}
+.ak77-more-panel [hidden]{display:none!important}
+/* Settings: tiny purposeful icons, top-aligned content, no absurd empty card heights */
+#content.ak78-settings #ak77UiCard{width:100%;min-width:0;padding:16px!important;border-radius:16px!important;align-self:start;overflow:hidden}
+#content.ak78-settings #ak77UiCard h3{display:flex!important;align-items:center!important;gap:8px!important;font-size:16px!important;margin:0 0 8px!important;line-height:1.3!important}
+#content.ak78-settings #ak77UiCard h3>svg{width:20px!important;height:20px!important;max-width:20px!important;max-height:20px!important;min-width:20px!important;flex:0 0 20px!important;display:block!important}
+#content.ak78-settings .ak32-pane{min-height:0!important;align-content:start!important;align-items:start!important}
+#content.ak78-settings .ak32-pane>.ak32-pane-head{min-height:0!important;margin:0 0 14px!important;padding:0 0 12px!important}
+#content.ak78-settings .ak32-pane>.ak32-pane-head h2 svg{width:20px!important;height:20px!important;min-width:20px!important;flex:0 0 20px!important}
+#content.ak78-settings .ak77-ui-form{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+#content.ak78-settings .ak77-ui-card .ak77-preview-icon-set{gap:7px}
+#content.ak78-settings .ak77-ui-card .ak77-preview-icon-set>span{width:36px;height:36px;flex:0 0 36px}
+#content.ak78-settings .ak77-ui-card .ak77-preview-icon-set svg{width:18px!important;height:18px!important}
+#content.ak78-settings .ak77-swatches{margin-top:13px!important}
+#content.ak78-settings .ak77-swatch{min-height:37px!important;padding:7px 11px!important}
+#content.ak78-settings .ak32-settings-card{min-height:0!important}
+#content.ak78-settings :is(input,select,textarea){max-width:100%}
+#content.ak78-settings .ak31-settings-main{min-width:0!important}
+/* Other routes get consistent content padding. */
+#content.ak78-workspace-content{min-width:0}
+#content.ak78-workspace-content .heading{gap:12px}
+#content.ak78-workspace-content .heading h1{line-height:1.2;letter-spacing:-.035em}
+@media(max-width:1000px){
+ html body.ak29-glass.ak33-editorial #content .ak78-kpi-section .grid.metrics,
+ html body.ak29-glass.ak33-editorial #content .ak78-more-stats .grid.metrics{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:740px){
+ html body.ak29-glass.ak33-editorial #content.ak78-home{padding:12px 12px 90px!important}
+ #content.ak78-home>.ak78-overview{padding:4px 1px 13px;margin-bottom:0}
+ #content .ak78-title-stack h1{font-size:24px!important}
+ #content .ak78-title-stack p{font-size:11px!important}
+ #content .ak78-new-bill{min-height:39px;padding:8px 11px;font-size:11px}
+ #content .ak78-section-heading{margin:17px 0 9px}
+ #content .ak78-section-heading h2{font-size:15px!important}
+ #content .ak78-section-note{font-size:10px}
+ html body.ak29-glass.ak33-editorial #content .ak78-kpi-section .grid.metrics,
+ html body.ak29-glass.ak33-editorial #content .ak78-more-stats .grid.metrics{gap:9px!important}
+ html body.ak29-glass.ak33-editorial #content .ak78-kpi-section .grid.metrics>.card.metric,
+ html body.ak29-glass.ak33-editorial #content .ak78-more-stats .grid.metrics>.card.metric{min-height:106px!important;padding:11px 12px!important;border-radius:14px!important;gap:4px!important}
+ #content .ak78-kpi-section .metric-value,#content .ak78-more-stats .metric-value{font-size:20px!important;line-height:1.2!important;margin:0!important}
+ #content .ak78-kpi-section .metric-label,#content .ak78-more-stats .metric-label{font-size:11px!important}
+ #content .ak78-kpi-section .metric-note,#content .ak78-more-stats .metric-note{font-size:9.5px!important;line-height:1.25!important}
+ #content .ak78-kpi-section .metric-icon,#content .ak78-more-stats .metric-icon{width:26px!important;height:26px!important;min-width:26px!important;flex:0 0 26px!important}
+ #content .ak78-kpi-section .metric-icon svg,#content .ak78-more-stats .metric-icon svg{width:15px!important;height:15px!important}
+ #content .ak78-more-stats summary{padding:12px 13px}
+ #content .ak78-more-stats .ak78-other-grid{padding:0 9px 9px!important}
+ #content .ak78-trend-grid>.card{padding:14px!important;min-height:0!important}
+ #content .ak78-trend-grid>.card .chart{max-height:176px!important;min-height:120px!important}
+ #content .ak78-trend-grid>.card .empty{min-height:85px!important;padding:14px!important}
+ #content .ak78-trend-grid>.card .empty svg{max-width:26px!important;max-height:26px!important}
+ #content .ak78-recent{padding:14px!important}
+ #content>.ak77-home-last.ak78-bottom-tools{margin-top:18px!important}
+ #content>.ak77-home-last.ak78-bottom-tools .heading .actions{gap:7px!important;margin-top:12px!important}
+ #content.ak78-settings #ak77UiCard{padding:13px!important}
+ #content.ak78-settings .ak77-ui-form{grid-template-columns:1fr;gap:10px}
+ #content.ak78-settings .ak77-more-panel{max-width:100%}
+}
+@media(max-width:350px){#content .ak78-title-stack p{display:none}#content .ak78-new-bill{padding:8px 9px}}
+@media(prefers-reduced-motion:reduce){#content .ak78-more-stats summary>svg{transition:none!important}}
+
+/* Deliberately disable legacy delayed reveal on grouped dashboard and selected settings.
+   The original animation delayed usability and sometimes left content invisible after DOM moves. */
+html body.ak29-glass.ak33-editorial #content .ak78-kpi-section .metric,
+html body.ak29-glass.ak33-editorial #content .ak78-more-stats .metric,
+html body.ak29-glass.ak33-editorial #content.ak78-settings .ak32-pane .ak32-settings-card,
+html body.ak29-glass.ak33-editorial #content.ak78-settings .ak32-pane #ak77UiCard{
+ opacity:1!important;visibility:visible!important;transform:none!important;
+ animation:none!important;transition:background-color .16s ease,border-color .16s ease!important;
+}
+#content.ak78-settings .ak78-about-details{width:100%;min-width:0;margin:12px 0 0;border:1px solid var(--ak33-line,#43434a);border-radius:14px;background:var(--ak33-surface,#20202a);overflow:hidden}
+#content.ak78-settings .ak78-about-details>summary{display:flex;align-items:center;gap:9px;padding:15px;cursor:pointer;font-weight:750;font-size:13px;list-style:none;color:var(--ak33-ink,#fff)}
+#content.ak78-settings .ak78-about-details>summary::-webkit-details-marker{display:none}
+#content.ak78-settings .ak78-about-details>summary svg{width:18px;height:18px;flex:0 0 18px;color:var(--ak77-accent,#9678ee);transform:rotate(-90deg)}
+#content.ak78-settings .ak78-about-details[open]>summary svg{transform:rotate(0deg)}
+#content.ak78-settings .ak78-about-details .akaora-v23-about{margin:0!important;border:0!important;border-top:1px solid var(--ak33-line,#43434a)!important;border-radius:0!important;box-shadow:none!important;min-width:0}
+@media(max-width:740px){
+ html body.ak29-glass.ak33-editorial #content.ak78-settings .ak31-settings-grid,
+ html body.ak29-glass.ak33-editorial #content.ak78-settings .ak32-pane{row-gap:12px!important;align-content:start!important}
+ #content.ak78-settings .ak78-about-details{margin-top:3px}
+ #content.ak78-settings #ak77UiCard h3{margin:0 0 9px!important}
+}

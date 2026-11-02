@@ -1,0 +1,122 @@
+/* Akaora Inventory Pro v49: one unified Invoice Studio, 12 thermal layouts, native text. */
+html body.ak29-glass.ak33-editorial #content:has(.ak49-studio){
+  width:100%!important;min-width:0!important;max-width:none!important;
+  padding-left:clamp(12px,2.2vw,34px)!important;
+  padding-right:clamp(12px,2.2vw,34px)!important;
+}
+#content #ak46-settings-pane.ak48-standalone-pane,
+#content #ak46-settings-pane .ak49-studio{width:100%!important;min-width:0!important;max-width:none!important;}
+#content #ak46-settings-pane .ak49-studio{gap:20px!important;display:grid!important;}
+#content #ak46-settings-pane .ak46-top{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;flex-wrap:wrap;}
+#content #ak46-settings-pane .ak46-top h2{font-size:clamp(23px,2vw,29px);font-weight:820;letter-spacing:-.035em}
+#content #ak46-settings-pane .ak46-toolbar{display:flex!important;gap:9px!important;align-items:center;flex-wrap:wrap;}
+#content #ak46-settings-pane .ak46-toolbar button{min-height:42px!important;height:42px!important;border-radius:12px!important;padding:8px 13px!important;font-weight:710!important;white-space:nowrap;display:inline-flex!important;align-items:center;justify-content:center;gap:8px}
+#content #ak46-settings-pane .ak46-toolbar button svg{height:18px!important;width:18px!important;min-width:18px!important;max-width:18px!important;flex:0 0 18px!important;}
+#content #ak46-settings-pane .ak46-grid{display:grid!important;grid-template-columns:minmax(340px,440px) minmax(0,1fr)!important;align-items:start!important;gap:20px!important;width:100%!important;min-width:0!important;max-width:none!important;}
+#content #ak46-settings-pane .ak46-config,
+#content #ak46-settings-pane .ak46-result{min-width:0!important;width:100%!important;max-width:none!important;border-radius:20px!important;}
+#content #ak46-settings-pane .ak46-config{display:block!important;padding:19px!important;overflow:visible!important;}
+#content #ak46-settings-pane .ak49-preview-panel{position:sticky!important;top:85px;align-self:start;min-width:0;max-width:100%;padding:20px!important;overflow:hidden!important;}
+#content #ak46-settings-pane .ak46-stage{display:flex!important;justify-content:center!important;align-items:flex-start!important;overflow:auto!important;max-height:min(75vh,920px)!important;min-height:380px!important;width:100%!important;min-width:0;padding:18px!important;background:#e9e7ee!important;border-color:#d7d3df!important;border-radius:15px!important;isolation:isolate;}
+#content #ak46-settings-pane #ak46-preview{display:block;min-width:0;max-width:100%;width:100%;margin-inline:auto;}
+#content #ak46-settings-pane #ak46-preview canvas.ak46-thermal{max-width:100%!important;height:auto!important;margin:0 auto!important;display:block}
+#content #ak46-settings-pane .ak49-overview{padding:15px 16px;border-radius:14px;background:color-mix(in srgb,var(--ak33-brand-strong,#8e6fdf) 10%,var(--ak33-surface,#25252c));border:1px solid color-mix(in srgb,var(--ak33-brand-strong,#8e6fdf) 24%,var(--ak33-line,#42424c));margin-bottom:16px;}
+#content #ak46-settings-pane .ak49-overview h3{font-size:18px!important;letter-spacing:-.03em;margin:4px 0!important}
+#content #ak46-settings-pane .ak49-overview p{font-size:12px;margin:6px 0 0;color:var(--ak33-muted,#aaa);line-height:1.5}
+#content #ak46-settings-pane .ak49-section-label{font-size:10px;font-weight:790;letter-spacing:.1em;color:var(--ak33-brand-strong,#9c81eb);text-transform:uppercase}
+#content #ak46-settings-pane .ak49-primary-group{margin:0 0 14px!important;padding:0 0 16px!important;border-bottom:1px solid var(--ak33-line,#43434b)}
+#content #ak46-settings-pane .ak49-primary-group h3{font-size:15px!important;margin:0 0 11px!important;}
+#content #ak46-settings-pane .ak49-primary-group .ak46-field{margin-top:10px;}
+#content #ak46-settings-pane .ak49-mode-selector{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:6px 0 11px;}
+#content #ak46-settings-pane .ak49-mode{display:grid;gap:5px;align-content:start;min-width:0;padding:13px;border:1px solid var(--ak33-line,#494951);border-radius:13px;background:var(--ak33-surface2,#282830);cursor:pointer;transition:border-color .15s,background .15s;}
+#content #ak46-settings-pane .ak49-mode.selected{border-color:#997aee!important;background:color-mix(in srgb,#9375e8 18%,var(--ak33-surface2,#292934))!important;box-shadow:0 0 0 1px #9375e825;}
+#content #ak46-settings-pane .ak49-mode input{accent-color:#9274e8!important;height:16px!important;width:16px!important;min-height:16px!important;margin:0;}
+#content #ak46-settings-pane .ak49-mode strong{font-size:12px;color:var(--ak33-ink,#f8f7fd);line-height:1.35}
+#content #ak46-settings-pane .ak49-mode small{font-size:10px;color:var(--ak33-muted,#aaa);line-height:1.45}
+#content #ak46-settings-pane .ak49-accordion{border:1px solid var(--ak33-line,#404048);border-radius:13px;background:var(--ak33-surface2,#292932);margin-top:9px;overflow:hidden;}
+#content #ak46-settings-pane .ak49-accordion summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 14px;color:var(--ak33-ink,#fff);font-size:13px;font-weight:760;list-style:none;}
+#content #ak46-settings-pane .ak49-accordion summary::-webkit-details-marker{display:none}
+#content #ak46-settings-pane .ak49-accordion summary:after{content:'⌄';font-size:17px;color:var(--ak33-muted,#aaa);transform:rotate(0deg);transition:transform .2s}
+#content #ak46-settings-pane .ak49-accordion[open] summary:after{transform:rotate(180deg)}
+#content #ak46-settings-pane .ak49-accordion-inner{display:grid;gap:11px;padding:2px 14px 15px;min-width:0;}
+#content #ak46-settings-pane .ak49-accordion-inner.ak46-cols{grid-template-columns:repeat(2,minmax(0,1fr));}
+#content #ak46-settings-pane .ak49-full{grid-column:1/-1}
+#content #ak46-settings-pane .ak49-accordion .ak46-field{min-width:0}
+#content #ak46-settings-pane .ak49-accordion input[type=file]{height:auto!important;min-height:42px;padding:8px!important;}
+#content #ak46-settings-pane .ak49-thermal-text{font-family:'Courier New',Consolas,monospace;font-size:12px;line-height:1.55;white-space:pre;tab-size:4;max-width:100%;padding:20px 12px;margin:0 auto!important;color:#101010!important;background:#fff!important;box-shadow:0 8px 25px #12111825;border:1px solid #dadada;overflow:visible;text-align:left;}
+#content #ak46-settings-pane .ak46-tabs{width:100%!important;display:flex;gap:6px;}
+#content #ak46-settings-pane .ak46-result > h3{font-size:16px!important;}
+#content .ak49-studio-link{padding:18px!important;border-radius:16px!important}
+#content .ak49-studio-link h3{font-size:16px!important;margin:0 0 8px!important}
+#content .ak49-studio-link p{font-size:12px;color:var(--ak33-muted,#aaa);line-height:1.5}
+#content .ak49-studio-link button{min-height:42px!important;margin-top:9px!important}
+@media(max-width:1140px){
+ #content #ak46-settings-pane .ak46-grid{grid-template-columns:minmax(0,1fr)!important}
+ #content #ak46-settings-pane .ak49-preview-panel{position:relative!important;top:auto!important;max-height:none!important;}
+ #content #ak46-settings-pane .ak46-stage{max-height:650px!important}
+}
+@media(max-width:640px){
+ html body.ak29-glass.ak33-editorial #content:has(.ak49-studio){padding-left:12px!important;padding-right:12px!important}
+ #content #ak46-settings-pane .ak46-top{display:grid!important;grid-template-columns:1fr!important;gap:12px!important}
+ #content #ak46-settings-pane .ak46-toolbar{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ #content #ak46-settings-pane .ak46-toolbar button{min-width:0!important;width:100%!important;white-space:normal!important;font-size:11px!important;height:auto!important;min-height:42px!important}
+ #content #ak46-settings-pane .ak46-grid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+ #content #ak46-settings-pane .ak46-config,#content #ak46-settings-pane .ak46-result{padding:13px!important}
+ #content #ak46-settings-pane .ak49-mode-selector{grid-template-columns:1fr}
+ #content #ak46-settings-pane .ak49-accordion-inner.ak46-cols{grid-template-columns:minmax(0,1fr)}
+ #content #ak46-settings-pane .ak46-stage{min-height:260px!important;padding:10px 6px!important;max-height:70vh!important}
+ #content #ak46-settings-pane .ak49-thermal-text{font-size:11px;line-height:1.5;padding:12px 7px}
+}
+/* Prevent nested settings/preview boxes from expanding beyond the viewport. */
+html body.ak29-glass.ak33-editorial #content:has(.ak49-studio),
+#content #ak46-settings-pane,
+#content #ak46-settings-pane .ak49-studio,
+#content #ak46-settings-pane .ak46-grid,
+#content #ak46-settings-pane .ak46-config,
+#content #ak46-settings-pane .ak46-result,
+#content #ak46-settings-pane .ak46-stage,
+#content #ak46-settings-pane .ak46-tabs,
+#content #ak46-settings-pane .ak46-field :is(input,select,textarea){box-sizing:border-box!important;min-width:0!important;}
+#content #ak46-settings-pane .ak46-stage,
+#content #ak46-settings-pane .ak46-tabs,
+#content #ak46-settings-pane .ak46-config,
+#content #ak46-settings-pane .ak46-result{max-width:100%!important;}
+
+/* v50 — thermal-first centered receipt pack */
+#content #ak46-settings-pane .ak50-mode-selector{grid-template-columns:repeat(2,minmax(0,1fr));}
+#content #ak46-settings-pane .ak50-mode-selector .ak49-mode{min-height:90px;padding:13px;}
+#content #ak46-settings-pane .ak50-align-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+#content #ak46-settings-pane .ak50-logo-settings{border:1px solid var(--ak33-line,#41414b);padding:14px;border-radius:13px;margin-top:8px;min-width:0}
+#content #ak46-settings-pane .ak50-logo-settings h4{font-size:13px;margin:0 0 11px;font-weight:770;color:var(--ak33-ink,#fff)}
+#content #ak46-settings-pane .ak50-logo-settings .ak46-checks{margin-top:12px}
+#content #ak46-settings-pane .ak50-logo-settings .ak46-help{margin-top:12px}
+#content #ak46-settings-pane .ak50-demo-row{display:grid;gap:7px;margin:12px 0 9px}
+#content #ak46-settings-pane .ak50-demo-row label{font-size:12px;font-weight:700;color:var(--ak33-ink,#fff)}
+#content #ak46-settings-pane .ak50-demo-row select{min-height:42px;max-width:100%;border-radius:11px;}
+#content #ak46-settings-pane .ak50-native-wrap{display:flex;flex-direction:column;align-items:center;max-width:100%;width:max-content;margin:0 auto;padding:0 0 14px;background:#fff;color:#151515;box-shadow:0 8px 26px #10101822}
+#content #ak46-settings-pane .ak50-native-wrap .ak49-thermal-text{box-shadow:none;border:0;white-space:pre!important;width:fit-content!important;max-width:100%!important;line-height:1.38!important;font-family:Consolas,'Courier New',monospace;font-size:12px!important;padding:12px 9px!important;letter-spacing:-.13px;}
+#content #ak46-settings-pane .ak50-logo-preview{display:block;max-width:100%!important;height:auto;margin:0 auto;padding-top:4px}
+#content #ak46-settings-pane .ak50-caution{max-width:220px;text-align:center;font-size:10px;line-height:1.45;padding:6px 10px;color:#a54b19;margin:0 auto;}
+#content #ak46-settings-pane .ak49-preview-panel .ak46-stage{background:linear-gradient(135deg,#eeebf6,#dfddea)!important}
+@media(max-width:740px){
+  #content #ak46-settings-pane .ak50-mode-selector,#content #ak46-settings-pane .ak50-align-options{grid-template-columns:1fr!important}
+  #content #ak46-settings-pane .ak50-mode-selector .ak49-mode{min-height:72px;}
+}
+
+/* v50 compatibility */
+
+/* v51: reference-inspired receipt options */
+.ak51-reference-hint{font-size:12px;line-height:1.5;color:var(--muted,#a6a6b9);padding:10px 12px;margin-top:12px;background:rgba(125,95,215,.08);border:1px solid rgba(125,95,215,.2);border-radius:11px}
+.ak51-extra-controls{display:grid;gap:13px;padding-top:14px;margin-top:14px;border-top:1px solid var(--line,rgba(140,140,155,.22))}
+.ak51-extra-controls .ak46-check{display:flex;align-items:center;gap:9px;min-height:36px}
+.ak51-extra-controls .ak46-check input{flex:0 0 auto}
+
+
+#content #ak46-settings-pane .ak52-visible-printbar{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0 16px;position:sticky;top:18px;z-index:6;padding:12px;border-radius:16px;background:color-mix(in srgb,var(--ak33-surface,#23232d) 84%,#7053c9 16%);border:1px solid color-mix(in srgb,var(--ak33-line,#42424c) 68%,#ad93ff 32%);box-shadow:0 10px 30px rgba(14,10,27,.24)}
+#content #ak46-settings-pane .ak52-visible-printbar button{width:100%;min-height:48px!important;border-radius:14px!important;font-weight:780!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important}
+#content #ak46-settings-pane .ak52-visible-printbar button.secondary{background:rgba(255,255,255,.05)!important;border:1px solid rgba(255,255,255,.1)!important}
+#content #ak46-settings-pane .ak52-visible-printbar button.amber{background:linear-gradient(135deg,#a682ff,#7757d8)!important;border:1px solid #b79eff!important;color:#fff!important;box-shadow:0 8px 24px rgba(127,91,231,.28)!important}
+#content #ak46-settings-pane .ak52-visible-printbar button svg{width:18px!important;height:18px!important;min-width:18px!important;flex:0 0 18px!important}
+@media(max-width:640px){
+ #content #ak46-settings-pane .ak52-visible-printbar{grid-template-columns:1fr!important;top:10px;padding:10px}
+}
