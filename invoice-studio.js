@@ -695,19 +695,14 @@ function consolidateLegacySettings(){
   const heading=(card.querySelector('.ak32-card-title,h3,h4')?.textContent||'').toLowerCase();
   if(heading.includes('invoice defaults')||heading.includes('printing & bill design')){
    card.hidden=true;card.style.display='none';
-   const pane=card.closest('.ak32-pane');
-   if(pane&&!pane.querySelector('.ak49-studio-link')){
-    const box=document.createElement('div');box.className='card ak49-studio-link';
-    box.innerHTML='<h3>Invoice design is now in one place</h3><p>Receipt logo, paper size, footer, invoice prefix and layout are managed centrally in Invoice Studio.</p><button type="button" class="amber">Open Invoice Studio</button>';
-    box.querySelector('button').onclick=()=>go('invoiceStudio');pane.prepend(box);
-   }
+
   }
  }
 }
 function ak52TidySettings(){
  if(typeof page==='undefined'||page!=='settings')return;
  const host=document.querySelector('#content');if(!host)return;
- if(host.querySelector('.ak52-settings-handoff'))return;
+ host.querySelectorAll('.ak52-settings-handoff, .ak49-studio-link').forEach(el=>el.remove());
  // Hide legacy invoice-only controls but retain their fields in the DOM for existing saveSettings().
  const invoiceInputs=['sPrefix','sTax','sFooter','sPaper','sBillTheme','sPrintFooter','sWatermark','sUpi'];
  invoiceInputs.forEach(id=>{const el=host.querySelector('#'+id);if(!el)return;const wrap=el.closest('.ak46-field,.full,.fieldgrid > div,.print-options > div');if(wrap)wrap.style.display='none'});
@@ -723,10 +718,7 @@ function ak52TidySettings(){
    }
   }
  }
- const pane=host.querySelector('.ak31-settings-main,.ak32-settings-main,.settings-layout,#content')||host;
- const handoff=document.createElement('section');handoff.className='ak52-settings-handoff';handoff.innerHTML=`<div class="ak52-settings-mark">${ak52Svg('receipt')}</div><div><strong>Invoice design & receipt printing</strong><p>Receipt templates, bill header and footer, paper formats, invoice numbering, print speed and logo controls are managed in Invoice Studio.</p></div><button type="button" class="amber">Open Invoice Studio</button>`;
- handoff.querySelector('button').onclick=()=>go('invoiceStudio');
- pane.prepend(handoff);
+ // No repeated Invoice Studio banner: Studio remains reachable from its own page.
 }
 function mountStandalone(){if(typeof page==='undefined'||page!=='invoiceStudio')return;const host=document.querySelector('#content');if(!host)return;host.innerHTML='<section id="ak46-settings-pane" class="ak48-standalone-pane">'+panelHTML()+'</section>';const pane=host.querySelector('#ak46-settings-pane');bind(pane);renderStudioPreview();}
 if(typeof navs!=='undefined'&&Array.isArray(navs)&&!navs.some(x=>x[0]==='invoiceStudio')){const index=navs.findIndex(x=>x[0]==='settings');navs.splice(index<0?navs.length:index,0,['invoiceStudio','Invoice Studio']);}

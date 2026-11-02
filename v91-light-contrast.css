@@ -1,0 +1,113 @@
+/* v91: Light Mode accessibility contrast corrections across Akaora Inventory Pro.
+   Scoped to light appearance only, excluding printed invoices and canvases. */
+body.ak29-glass.ak33-editorial.ak29-light{color-scheme:light!important}
+/* Confirmed legacy dark-on-light conflicts in headings/labels across screens. */
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(
+  h1,h2,h3,h4,h5,h6,.ap-person-text h3,.ap-person-text h3 button,
+  .ap-salaryline strong,.ap-pay-preview strong,.ap-pay-preview b,
+  .ak78-title-stack h1,.ak78-section-heading h2,.ak78-recent h3,
+  .ak27-item-cell,.ak27-name,.ak29-heading-copy h2,
+  .pd-name,.pd-row strong,.ak46-group h3,.bcs-title
+){color:#20263a!important;opacity:1!important;text-shadow:none!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(
+  .ap-person-text p,.ap-salaryline small,.ap-policy,.ap-secure-note,
+  .ap-employee-card .muted,.ak78-title-stack p,.ak78-section-note,
+  .ap-pay-preview small,.ap-employee-card small,
+  .ak27-tile-meta,.ak29-heading-copy small,.bcs-card p,.bcs-card small,
+  .ak46-note,.ak27-sub
+){color:#566176!important;opacity:1!important;text-shadow:none!important}
+/* Salary cards and data panels use opaque light backgrounds, never translucent gray. */
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(
+  .ap-employee-card,.ap-salaryline,.ap-pay-preview,.ap-secure-note,
+  .ak78-priority-grid .metric,.ak78-other-grid .metric,
+  .ak78-trend-card,.ak78-recent,.ak78-bottom-tools,
+  .ak27-toolbar,.ak89-stock-toolbar-desktop,
+  .ap-profile-header,.ap-employee,.ap-action-row
+){border-color:#dce2ed!important;color:#22283a!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content .ap-employee-card{background:#fff!important;background-image:none!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content .ap-salaryline{background:#f8f9fc!important;background-image:none!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content .ap-salaryline strong{color:#20263a!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content .ap-advance-action{background:#fff!important;color:#5743a7!important;border-color:#cbbcf2!important}
+/* Prevent dark-style gradients with white text on light card surfaces. */
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(
+ .ap-badge,.status,.ak27-stock-pill,.ak78-section-kicker,.ak78-kicker,
+ .ak86-count-badge
+){opacity:1!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(
+ .ap-person-actions button.secondary,.ap-action-row button.secondary,
+ .ap-employee-card button.secondary,.ap-employee-card .ap-advance-action,
+ .ap-employee-card .ap-name-button,.ak89-toolbar-actions button.secondary,
+ .ak89-mobile-action
+){color:#263049!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(
+ button.amber,button.primary,button.ak78-new-bill,.ap-person-actions button:not(.secondary),.ap-action-row button:not(.secondary)
+){color:#fff!important}
+/* Only plain secondary action labels need dark ink; avoid overriding icon theme accents. */
+html body.ak29-glass.ak33-editorial.ak29-light #modalback :is(
+ label,p,small,.muted,.ap-policy,.ap-pay-preview,.ap-pay-preview table td
+){opacity:1!important}
+html body.ak29-glass.ak33-editorial.ak29-light #modalback :is(label,.muted,.ap-policy){color:#566176!important}
+html body.ak29-glass.ak33-editorial.ak29-light #modalback :is(.ap-pay-preview h2,.ap-pay-preview h3,.ap-pay-preview strong,.ap-pay-preview b){color:#22263a!important}
+html body.ak29-glass.ak33-editorial.ak29-light #modalback :is(.ap-pay-preview,.ap-salaryline){background:#fff!important;color:#20263a!important;border-color:#dce2ed!important}
+/* Transparent neutral surfaces should not inherit old white-on-dark text. */
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(
+ .ak27-product-footer,.ak27-register,.ak86-product-row,.ak86-mobile-products,
+ .ap-employee-grid,.ap-salaryline,.ap-pay-preview,.ap-secure-note,
+ .ak78-priority-grid,.ak78-more-stats,.ak78-trend-grid
+){color:#22283a!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(
+ .ak27-product-footer label,.ak78-more-stats summary small,
+ .ap-secure-note,.ap-pay-preview .muted
+){color:#576276!important}
+/* Any browser-native disabled control remains distinct without fading its labels to invisible. */
+html body.ak29-glass.ak33-editorial.ak29-light :is(button,input,select,textarea):disabled{opacity:.64!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(button,input,select,textarea):focus-visible{outline:2px solid #7654d8!important;outline-offset:2px!important}
+@media print{body.ak29-glass.ak33-editorial.ak29-light .ap-pay-preview{color:#111!important;background:#fff!important}body.ak29-glass.ak33-editorial.ak29-light .ap-pay-preview *{color:#111!important}}
+/* Light mode: never fade critical dashboard/page text during route transitions.
+   Preserve other interactions, including hover feedback and dark-mode animations. */
+html body.ak29-glass.ak33-editorial.ak29-light:not(.reduce-motion) #content > *{
+  animation:none!important; opacity:1!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light:not(.reduce-motion) #content .v60-arrive{
+  animation:none!important; opacity:1!important;
+}
+/* Light-mode POS controls: inherited midnight text was almost white on pale surfaces. */
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-list-head,
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-list-head > span,
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-display-actions{
+  color:#44516b!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-display-actions{
+  background:#f3f5fa!important;border-color:#d9dfeb!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-display-actions button:not(.selected){
+  color:#414f67!important;background:transparent!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-display-actions button.selected{
+  color:#563ba7!important;background:#e8e1f8!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-pagination button:not(.active){
+  background:#ffffff!important;background-image:none!important;color:#26324a!important;
+  border:1px solid #d5ddeb!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-pagination button.active{
+  background:#684cc5!important;background-image:none!important;color:#ffffff!important;border-color:#684cc5!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-pagination button:disabled{
+  opacity:.62!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light #content .akaora-pos-frame .pos-pagination .pos-ellipsis{
+  color:#4e5a6e!important;
+}
+/* Settings color selectors: classic dark-theme labels were #edf3fe on #f8f9fd. */
+html body.ak29-glass.ak33-editorial.ak29-light #content .ak77-swatch,
+html body.ak29-glass.ak33-editorial.ak29-light #content .ak77-swatch[aria-pressed="false"]{
+  background:#ffffff!important;color:#27314b!important;border-color:#d3daea!important;
+}
+html body.ak29-glass.ak33-editorial.ak29-light #content .ak77-swatch[aria-pressed="true"]{
+  background:#f0ebfc!important;color:#5039a9!important;border-color:#8e79d4!important;
+}
+/* Promotional labels are meaningful text, not decorative, and need sufficient contrast. */
+html body.ak29-glass.ak33-editorial.ak29-light #content .v16-tag{
+  color:#4a388a!important;background:#ede8fb!important;border:1px solid #ddd4f7!important;
+}

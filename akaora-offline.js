@@ -1,4 +1,4 @@
-/* Akaora Inventory Pro v81 - offline worker bootstrap. No cached credentials. */
+/* Akaora Inventory Pro v94 - offline worker bootstrap. No cached credentials. */
 (function(){
  'use strict';
  const state={supported:('serviceWorker' in navigator),status:'initializing'};
@@ -8,7 +8,7 @@
    state.status='unsupported';return false;
   }
   try{
-   const registration=await navigator.serviceWorker.register('./service-worker.js?v=82',{scope:'./'});
+   const registration=await navigator.serviceWorker.register('./service-worker.js?v=95',{scope:'./'});
    await navigator.serviceWorker.ready;
    if(!navigator.serviceWorker.controller){
     await Promise.race([

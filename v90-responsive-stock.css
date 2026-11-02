@@ -1,0 +1,30 @@
+/* v90 stock desktop/mobile reliable responsive styles; overrides legacy layers */
+@media (min-width:741px){
+  html body #content .ak89-stock-toolbar-desktop{
+    width:100%;max-width:100%;min-width:0;display:grid!important;gap:13px!important;
+    padding:17px 18px!important;background:var(--panel)!important;border:1px solid var(--line)!important;
+    border-radius:17px!important;overflow:hidden!important;
+  }
+  html body #content .ak89-stock-toolbar-desktop .ak89-stock-toolbar-row-main{
+    display:grid!important;grid-template-columns:minmax(260px,2.15fr) minmax(155px,.82fr) minmax(155px,.82fr)!important;
+    gap:12px!important;align-items:end!important;min-width:0;
+  }
+  html body #content .ak89-stock-toolbar-desktop .ak89-stock-toolbar-row-secondary{
+    display:flex!important;align-items:end!important;gap:14px!important;justify-content:space-between!important;flex-wrap:wrap!important;
+  }
+  html body #content .ak89-stock-toolbar-desktop .ak89-field-view{width:200px;max-width:100%;flex:0 0 auto}
+  html body #content .ak89-stock-toolbar-desktop .ak89-field-view .ak27-switch-wide{width:100%!important;display:flex!important}
+  html body #content .ak89-stock-toolbar-desktop .ak89-field-view .ak27-switch-wide button{flex:1!important}
+  html body #content .ak89-stock-toolbar-desktop .ak89-toolbar-actions{display:flex!important;align-items:center!important;gap:8px!important;flex-wrap:wrap!important}
+  html body #content .ak89-stock-toolbar-desktop .ak89-field :is(input,select){width:100%!important;max-width:none!important;min-height:44px!important;height:44px!important;padding:0 12px!important;}
+  html body #content .ak89-stock-toolbar-desktop .ak27-field-label{display:block!important;margin:0 0 5px!important;font-size:11px!important;font-weight:700!important;color:var(--muted)!important;letter-spacing:.01em}
+  html body #content .ak89-stock-toolbar-desktop .ak89-toolbar-actions .ak27-action-button{height:44px!important;min-height:44px!important;padding:0 14px!important;white-space:nowrap!important}
+}
+@media (min-width:741px) and (max-width:1020px){
+ html body #content .ak89-stock-toolbar-desktop .ak89-stock-toolbar-row-main{grid-template-columns:minmax(180px,1.55fr) minmax(120px,.8fr) minmax(120px,.8fr)!important}
+}
+@media(max-width:740px){
+ html body #content .ak89-mobile-stock-panel{display:grid!important;gap:10px!important}
+ html body #content .ak89-mobile-stock-panel .ak89-mobile-actions{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+ html body #content .ak89-mobile-stock-panel .ak89-mobile-actions button{min-width:0!important;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+}

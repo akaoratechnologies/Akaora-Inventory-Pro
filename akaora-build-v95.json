@@ -1,0 +1,15 @@
+{
+  "app": "Akaora Inventory Pro",
+  "version": "v95",
+  "variant": "smart-sync",
+  "cloudSync": true,
+  "githubPagesCompatible": true,
+  "advancedBarcodeStudio": false,
+  "inventoryLabels": true,
+  "deployment": "GitHub Actions -> Pages",
+  "notes": [
+    "Repository subpath-aware PWA and offline service worker",
+    "Only public runtime assets are deployed",
+    "Firebase auth authorized domain must be configured manually"
+  ]
+}

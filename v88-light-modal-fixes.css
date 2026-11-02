@@ -1,0 +1,121 @@
+/* Akaora Inventory Pro v88 — final targeted light-mode popup and surface corrections.
+   Dark mode and receipt/KOT/print sheet rendering are deliberately excluded. */
+body.ak29-glass.ak33-editorial.ak29-light #modalback {
+  background:rgba(25, 31, 51, .48)!important;
+  -webkit-backdrop-filter:blur(5px)!important;
+  backdrop-filter:blur(5px)!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalback > .modal {
+  background:#ffffff!important;
+  background-image:none!important;
+  border:1px solid #dce1eb!important;
+  color:#24283a!important;
+  opacity:1!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  box-shadow:0 18px 64px rgba(22,29,49,.18)!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalback > .modal .modalhead,
+body.ak29-glass.ak33-editorial.ak29-light #modalback > .modal .modalfoot,
+body.ak29-glass.ak33-editorial.ak29-light #modalback > .modal #modalBody{
+  background-color:#fff!important;
+  background-image:none!important;
+  color:#24283a!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalback > .modal .modalhead,
+body.ak29-glass.ak33-editorial.ak29-light #modalback > .modal .modalfoot{
+  border-color:#e0e5ee!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalback .modalhead :is(h2,button),
+body.ak29-glass.ak33-editorial.ak29-light #modalback :is(.pd-name,.pd-price,.v19-picker-head h3,.v30-variant-title){
+  color:#202639!important;
+}
+/* Product details: neutral surfaces, clear stock fields and consistent action buttons. */
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-layout,
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-info{
+  background:#fff!important;
+  color:#24283a!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-image{
+  background:#f5f6fb!important;
+  border-color:#e3e7ef!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-row{
+  background:#f8f9fc!important;
+  border:1px solid #dce2ec!important;
+  color:#232a40!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-row small,
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-info .muted,
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v19-picker-head .muted{
+  color:#596579!important;
+  opacity:1!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-row strong{color:#283149!important}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-code{
+  background:#fff!important;
+  border-color:#dee3ec!important;
+  color:#111827!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody :is(.pd-bag-btn,#pdEdit,#pdAdjust,#pdBarcode){
+  background:#fff!important;
+  color:#303650!important;
+  border:1px solid #cfd7e5!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody :is(.pd-bill-btn,button.amber){
+  background:#684cc5!important;
+  border-color:#684cc5!important;
+  color:#fff!important;
+}
+/* Variation picker. Old tinted-glass values had white-on-white labels and a washed-out footer. */
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v19-picker-head,
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v30-variant-group{
+  background:#fff!important;
+  border-color:#e0e4ec!important;
+  color:#252b40!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v30-option,
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v19-size-choice{
+  background:#f8f9fc!important;
+  color:#283149!important;
+  border:1px solid #cfd7e5!important;
+  opacity:1!important;
+  box-shadow:none!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v30-option small{color:#566278!important;opacity:1!important}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v30-option[aria-pressed="true"]{
+  background:#eee9fc!important;
+  border:2px solid #7456d5!important;
+  color:#503ba4!important;
+  box-shadow:0 0 0 2px rgba(104,76,197,.1)!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v30-picker-summary{
+  background:#f5f1fc!important;
+  border-color:#ded5f2!important;
+  color:#273149!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalBody .v30-picker-summary strong{
+  color:#6246bd!important;
+}
+body.ak29-glass.ak33-editorial.ak29-light #modalback #modalFoot button:disabled{
+  opacity:.5!important;cursor:not-allowed!important;
+}
+/* Other app dialogs and drawers that appeared translucent in the light palette. */
+body.ak29-glass.ak33-editorial.ak29-light :is(.akaora-scan-dialog,.v15-mobile-more-panel,.ak77-more-panel,.ak39-modal,.ak46-config,.ak46-result){
+  background-color:#fff!important;
+  background-image:none!important;
+  color:#252a40!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+/* Protect dark photo/QR/video backgrounds and all paper previews from these rules. */
+@media (max-width:740px){
+  body.ak29-glass.ak33-editorial.ak29-light #modalback > .modal{
+    border-radius:17px!important;
+  }
+  body.ak29-glass.ak33-editorial.ak29-light #modalBody .pd-row{
+    border-radius:12px!important;
+  }
+}

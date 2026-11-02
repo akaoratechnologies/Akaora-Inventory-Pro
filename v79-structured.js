@@ -28,8 +28,11 @@
   for(const item of all){if(primary.length>=4)break;if(!item.dataset.ak78Used){item.dataset.ak78Used='1';primary.push(item)}}
   const extra=all.filter(x=>!primary.includes(x));
   const welcome=el('header','ak78-overview');
-  welcome.innerHTML='<div class="ak78-title-stack"><span class="ak78-kicker">BUSINESS DASHBOARD</span><h1>Overview</h1><p>Your important numbers in one place.</p></div><button type="button" class="ak78-new-bill">'+icon('plus')+'<span>New bill</span></button>';
-  welcome.querySelector('button').addEventListener('click',()=>go('billing'));
+  const hour=new Date().getHours();
+  const greeting=hour>=5&&hour<12?'Good Morning':hour>=12&&hour<17?'Good Afternoon':hour>=17&&hour<21?'Good Evening':'Good Night';
+  const name=typeof profile==='object' && profile?.owner ? String(profile.owner).trim() : '';
+  welcome.innerHTML='<div class="ak78-title-stack ak92-home-greeting"><span class="ak78-kicker">BUSINESS DASHBOARD</span><h1></h1><p>Here is your business overview for today.</p></div>';
+  welcome.querySelector('h1').textContent=greeting+(name?', '+name:'')+'!';
   const current=el('section','ak78-kpi-section');
   current.innerHTML='<div class="ak78-section-heading"><div><span class="ak78-section-kicker">TODAY AT A GLANCE</span><h2>Key numbers</h2></div><span class="ak78-section-note">Live shop data</span></div>';
   const keyGrid=el('div','grid metrics ak78-priority-grid');primary.forEach(card=>keyGrid.appendChild(card));current.appendChild(keyGrid);

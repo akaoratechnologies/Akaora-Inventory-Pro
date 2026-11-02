@@ -1,5 +1,5 @@
 {
-  "id": "/",
+  "id": "./",
   "name": "Akaora Inventory Pro",
   "short_name": "Akaora Inventory",
   "description": "Offline-first inventory with optimized change-only account synchronization",

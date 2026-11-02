@@ -1,0 +1,95 @@
+/* Akaora Inventory Pro v87 — unified, accessible classic LIGHT theme.
+   Scoped only to light mode: existing dark mode, invoice print output and app logic are unchanged. */
+body.ak29-glass.ak33-editorial.ak29-light {
+  --ak33-page:#f5f6fa!important; --ak33-side:#ffffff!important;
+  --ak33-surface:#ffffff!important; --ak33-surface2:#f8f9fd!important;
+  --ak33-input:#ffffff!important; --ak33-line:#dee3ee!important;
+  --ak33-ink:#22263a!important; --ak33-muted:#545d71!important;
+  --ak33-soft:#626a7c!important; --ak33-brand:#6247bd!important;
+  --ak33-brand-strong:#6246bd!important; --ak33-brand-tint:#f0ebfc!important;
+  --bg:#f5f6fa!important; --side:#fff!important; --panel:#fff!important;
+  --card:#fff!important; --line:#dee3ee!important; --text:#22263a!important;
+  --muted:#545d71!important; --blue:#6246bd!important; --amber:#6246bd!important;
+  --ak-bg:#f5f6fa!important; --ak-frost:#fff!important;
+  --ak-stroke:#dee3ee!important; --glass-border:#dee3ee!important;
+  --ak77-accent:#6246bd!important; --ak77-tint:#f0ebfc!important;
+  --ak77-line:#dee3ee!important;
+  color-scheme:light!important;color:#22263a!important;
+  background:#f5f6fa!important;background-image:none!important;
+}
+/* Unified app shell, no dark overlay gradients or milky ivory layers. */
+html body.ak29-glass.ak33-editorial.ak29-light :is(.app,.main,.content,#content){color:#22263a!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.app,.main){background:#f5f6fa!important;background-image:none!important}
+html body.ak29-glass.ak33-editorial.ak29-light #content{background:#f5f6fa!important;background-image:none!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.sidebar,.topbar,.mobile-nav){background:#fff!important;color:#22263a!important;border-color:#dee3ee!important}
+html body.ak29-glass.ak33-editorial.ak29-light .topbar :is(button,.account-trigger){color:#2b3044!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.heading h1,.heading h2,.ak86-products-heading h1,.ak86-catalog-title strong,.ak77-more-panel h2,.ak32-pane h2,.ak32-card-title){color:#22263a!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.heading p,.muted,.tiny,.metric-label,.metric-note,.ak86-products-heading p,.ak86-catalog-title small,.ak32-pane-head p,.ak31-settings-note,.ak77-more-panel p){color:#545d71!important;opacity:1!important}
+/* Cards, reports, customer lists, settings, offers, workspaces and dialogs. */
+html body.ak29-glass.ak33-editorial.ak29-light :is(
+ .card,.metric,.settings-card,.settings-section,.ak29-glass-panel,.ak32-settings-card,
+ .ak31-settings-rail,.ak31-settings-grid details,.ak31-settings-note,
+ .ak32-pane .v20-settings-extra,.ak32-pane .ak31-settings-note,
+ .ak27-tile,.ak27-products .ak27-toolbar,.ak27-reg-wrap,
+ .ak86-mobile-products .ak27-tile,.ak86-product-row,.ak86-more-options,
+ .pos-browser,.pos-checkout,.pos-catalog-area,.pos-product,.pos-filterbar,
+ .bcs-card,.bcs-panel,.bcs-product,.v15-settings-group,
+ .ac65-card,.ac65-metric,.qb-card,.ak46-config,.ak46-result,
+ .ak77-more-panel,.ak77-operation,.ak77-featured-btn,.ak77-more-backdrop .ak77-more-panel,
+ .modal,.modal-content,.modalbox,.dialog,.popup,.v15-mobile-more-panel
+){background:#fff!important;background-image:none!important;border-color:#dee3ee!important;color:#22263a!important;box-shadow:0 2px 12px rgba(34,38,58,.035)!important}
+/* Dialog scrims remain dark on purpose. */
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak86-mobile-products .ak27-tile-photo,.ak86-row-image,.ak27-thumb,.photo,.pos-product-picture,.bcs-thumb){background:#f5f6fa!important;border-color:#e3e7ee!important}
+/* Inputs and controls: use consistent white surfaces, readable text and accessible placeholder color. */
+html body.ak29-glass.ak33-editorial.ak29-light :is(input:not([type=checkbox]):not([type=radio]):not([type=color]):not([type=file]),select,textarea){background:#fff!important;color:#22263a!important;border-color:#cfd6e3!important;box-shadow:none!important;opacity:1!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(input,textarea)::placeholder{color:#657083!important;opacity:1!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(label,.ak86-more-header strong,.ak86-density-row label,.ak86-catalog-title strong,.ak27-tile-name,.ak86-row-name,.ac65-header h1,.qb-card h2,.qb-card h3){color:#2a3043!important;opacity:1!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(button.secondary,.ak86-scan-button,.ak86-options-button,.ak86-backup-actions button,.ak86-row-edit,.ak27-reg-actions button,.qb-plain,.ac65-outline){background:#fff!important;color:#2a3043!important;border-color:#d5dbe7!important;box-shadow:none!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(button.amber,button.primary,.ak86-add-product,.ac65-primary,.qb-primary){background:#684cc5!important;background-image:none!important;color:#fff!important;border-color:#684cc5!important;box-shadow:0 2px 6px rgba(104,76,197,.15)!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(button.amber,button.primary,.ak86-add-product) :is(svg,span){color:inherit!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(button.secondary,.ak86-scan-button,.ak86-options-button,.ak86-row-edit):hover{background:#f2effb!important;border-color:#b8abe7!important}
+/* Links, tabs, view segments and active sidebar/nav states. */
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak86-view-segment,.ak27-switch,.ak31-theme-switch,.ac65-tabs,.ak46-tabs){background:#f4f5fa!important;border-color:#dee3ee!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak86-view-segment button:not(.active),.ak27-switch button:not(.active),.ak31-theme-switch button:not(.active)){color:#4e586a!important;background:transparent!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak86-view-segment button.active,.ak27-switch button.active,.ak31-theme-switch button.active){background:#e9e2fa!important;color:#5940ad!important;border-color:transparent!important}
+html body.ak29-glass.ak33-editorial.ak29-light .mobile-nav button:not(.active){color:#5b6273!important;opacity:1!important}
+html body.ak29-glass.ak33-editorial.ak29-light .mobile-nav button.active{color:#6246bd!important;opacity:1!important}
+html body.ak29-glass.ak33-editorial.ak29-light .sidebar .nav:not(.active){color:#4e586a!important}
+html body.ak29-glass.ak33-editorial.ak29-light .sidebar .nav.active{background:#f0ebfc!important;color:#6246bd!important}
+/* Status colors retain meaning but work on white. */
+html body.ak29-glass.ak33-editorial.ak29-light :is(.status.low,.ak27-stock-pill.warning,.ak27-stock-pill.low){background:#fff0f0!important;color:#ad3346!important;border-color:#f7d0d8!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.status:not(.low):not(.partial):not(.warning),.ak27-stock-pill:not(.low):not(.warning)){background:#eaf7ef!important;color:#176340!important;border-color:#d1e9da!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.metric-value,.ak27-tile-price,.ak86-row-details>strong){color:#6344b8!important}
+html body.ak29-glass.ak33-editorial.ak29-light .akaora-metric-profit .metric-value{color:#18744c!important}
+html body.ak29-glass.ak33-editorial.ak29-light .akaora-metric-expenses .metric-value{color:#ae3447!important}
+html body.ak29-glass.ak33-editorial.ak29-light .status.partial{background:#fff5e6!important;color:#935c12!important;border-color:#f3dfba!important}
+html body.ak29-glass.ak33-editorial.ak29-light .ac65-positive{color:#17744b!important}
+html body.ak29-glass.ak33-editorial.ak29-light #qb-root .qb-chip[data-status=Accepted]{background:#e5f4eb!important;color:#13653d!important}
+html body.ak29-glass.ak33-editorial.ak29-light #qb-root .qb-chip[data-status=Rejected],html body.ak29-glass.ak33-editorial.ak29-light #qb-root .qb-chip[data-status=Expired]{background:#fff1ef!important;color:#a63a44!important}
+html body.ak29-glass.ak33-editorial.ak29-light #qb-root .qb-chip[data-status=Sent]{background:#e9f1ff!important;color:#275ca5!important}
+html body.ak29-glass.ak33-editorial.ak29-light #qb-root .qb-warn{background:#fff2f3!important;color:#a63a44!important;border-color:#f3d5d7!important}
+/* Settings, account register, quotation, labels, POS and invoice studio. */
+html body.ak29-glass.ak33-editorial.ak29-light .ac65{--ac-panel:#fff!important;--ac-border:#dee3ee!important;--ac-text:#22263a!important;--ac-muted:#545d71!important;--ac-accent:#6246bd!important;--ac-bg:#f6f3fd!important}
+html body.ak29-glass.ak33-editorial.ak29-light .ac65 :is(.ac65-info,.ac65-ledgerbalance){background:#f6f3fd!important;color:#4a5265!important}
+html body.ak29-glass.ak33-editorial.ak29-light .ac65 :is(.ac65-muted,.ac65-small,.ac65-summary span,.ac65-card p,.ac65-card label){color:#505c72!important}
+html body.ak29-glass.ak33-editorial.ak29-light #qb-root{--qb-border:#dce0eb!important;--qb-accent:#6246bd!important;color:#22263a!important}
+html body.ak29-glass.ak33-editorial.ak29-light #qb-root :is(.qb-muted,.qb-record small,.qb-amount-label,.qb-fields label){color:#515c70!important}
+html body.ak29-glass.ak33-editorial.ak29-light #qb-root :is(.qb-record,.qb-item){background:#f8f9fc!important;color:#22263a!important;border-color:#dee3ee!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak46-studio,.ak46-group,.ak46-stage,.ak46-sheet,.bcs-product-list){color:#22263a!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak46-help,.ak46-note,.ak46-top p,.ak46-field label){color:#505a70!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak31-settings-navbtn:not(.active),.ak32-pane p,.ak32-pane label){color:#505a70!important}
+html body.ak29-glass.ak33-editorial.ak29-light .ak31-settings-navbtn.active{background:#eee9fc!important;color:#6246bd!important;border-color:#e4dbfa!important}
+/* Avoid faded text caused by legacy CSS opacity and filter-based overlays. */
+html body.ak29-glass.ak33-editorial.ak29-light #content :is(p,small,span,label,strong,h1,h2,h3,h4){text-shadow:none!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak86-stock-field select,.ak86-search-row input,.ak86-more-options select){background:#fff!important;color:#22263a!important;border-color:#d2d8e4!important}
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak86-stock-panel,.ak86-products-heading,.ak86-catalog-title){background:transparent!important;box-shadow:none!important}
+/* Reinstate essential color inside meaningful chips/notification markers. */
+html body.ak29-glass.ak33-editorial.ak29-light :is(.ak77-pro,.badge.pro,.ak77-accent-chip){color:#4d348e!important}
+@media(max-width:740px){
+ html body.ak29-glass.ak33-editorial.ak29-light :is(.ak77-more-panel,.ak32-pane,.ak46-studio,.ak86-product-row){color:#22263a!important}
+ html body.ak29-glass.ak33-editorial.ak29-light .mobile-nav{box-shadow:0 -3px 14px rgba(23,30,49,.065)!important}
+}
+@media print{
+ /* Do not affect receipt/KOT layouts or printable barcode canvas. */
+ body.ak29-glass.ak33-editorial.ak29-light :is(.ak46-sheet,.ak46-thermal,.ak54-fixed-brand){background:#fff!important;color:#000!important;box-shadow:none!important}
+}

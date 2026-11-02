@@ -3,7 +3,7 @@
  * Firestore usage varies with actual record mutations, not dashboard refreshes.
  */
 const SYNC_KEYS=['apora_profile','apora_products','apora_invoices','apora_parties','apora_expenses','apora_purchases','apora_moves','apora_settings','apora_staff','apora_attendance','apora_advances','apora_attendanceLogs','apora_salaryPayments','apora_offers','apora_notifications','apora_quotations','apora_quotation_sequence','apora_accounts_v65','apora_coupons_v15'];
-const OWNER_KEY='akaora_inventory_owner_uid_v1',META_KEY='akaora_cloud_sync_v66_meta',CHUNK=180000;
+const OWNER_KEY='akaora_inventory_owner_uid_v1',META_KEY='akaora_cloud_sync_v66_meta',CHUNK=260000;
 const watched=new Set(SYNC_KEYS),priority=new Set(['apora_products','apora_invoices','apora_accounts_v65','apora_quotations','apora_purchases','apora_expenses']);
 const deviceId=(()=>{try{let v=sessionStorage.getItem('akaora_sync_device_v81');if(!v){v=crypto.randomUUID?.()||Date.now().toString(36)+Math.random().toString(36).slice(2);sessionStorage.setItem('akaora_sync_device_v81',v)}return v}catch{return Date.now().toString(36)}})();
 let sdk,db,uid='',started=false,ready=false,applying=false,disconnected=false,unsubscribe=null;

@@ -9,7 +9,7 @@ const operations=[
  ['reports','Reports','chart'],['customers','Customers','users'],['parties','Parties','users'],
  ['purchases','Purchases','package'],['expenses','Expenses','wallet'],['accounts','Accounts','wallet'],
  ['quotations','Quotations','file'],['staff','Staff & payroll','users'],['offers','Offers','tag'],
- ['coupons','Coupons','tag']
+ ['coupons','Coupons','tag'],['barcodes','Inventory Labels','barcode']
 ];
 const shapes={
  home:'<rect x="3" y="3" width="8" height="8" rx="1.8"/><rect x="13" y="3" width="8" height="8" rx="1.8"/><rect x="3" y="13" width="8" height="8" rx="1.8"/><rect x="13" y="13" width="8" height="8" rx="1.8"/>',
@@ -78,7 +78,7 @@ function openMore(){
  const menuGroups=[
   ['Sales & customers',['reports','customers','parties']],
   ['Business operations',['purchases','expenses','accounts','quotations']],
-  ['Team & tools',['staff','offers','coupons']]
+  ['Team & tools',['staff','offers','coupons','barcodes']]
  ];
  const items=menuGroups.map(([title,routes])=>'<div class="ak78-menu-group"><div class="ak77-more-section-title">'+title+'</div><div class="ak77-operations">'+routes.map(route=>{const entry=operations.find(x=>x[0]===route);if(!entry)return '';const [,label,ic]=entry;return '<button type="button" data-ak77-route="'+route+'" data-ak78-search="'+label.toLowerCase()+'" aria-current="'+(page===route?'page':'false')+'" class="ak77-operation">'+svg(ic)+'<span>'+label+'</span></button>'}).join('')+'</div></div>').join('');
  backdrop.innerHTML='<section class="ak77-more-panel" role="dialog" aria-modal="true" aria-labelledby="ak77-more-title"><div class="ak77-sheet-grip"></div><div class="ak77-more-heading"><div><h2 id="ak77-more-title">Your workspace</h2><p>Find a tool or open a section</p></div><button class="ak77-more-close" type="button" aria-label="Close menu">'+svg('close')+'</button></div><label class="ak78-menu-search-label" for="ak78-menu-search">Search tools</label><input id="ak78-menu-search" class="ak78-menu-search" type="search" placeholder="Search features..." autocomplete="off"><div class="ak78-featured-section"><div class="ak77-more-section-title">Quick access</div><div class="ak77-featured">'+tiles+'</div></div>'+items+'<p class="ak78-menu-empty" role="status" hidden>No matching tools. Try a different word.</p><div class="ak77-more-footer">'+svg('crown',true)+'<span>Akaora Inventory Pro</span></div></section>';

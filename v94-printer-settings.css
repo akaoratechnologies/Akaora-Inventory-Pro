@@ -1,0 +1,21 @@
+/* v94: compact settings printer entry and accessible device selector */
+.ak94-printer-trigger{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;min-height:40px!important;border-radius:12px!important;padding:7px 13px!important;white-space:nowrap;font-size:12px!important;font-weight:750!important;background:var(--ak33-surface,#fff)!important;color:var(--ak33-ink,var(--text))!important;border:1px solid var(--ak33-line,#dfe3ee)!important;box-shadow:none!important}
+.ak94-printer-trigger svg{width:17px;height:17px;flex:none}
+.ak94-printer-dot{width:8px;height:8px;border-radius:50%;background:#a5acbc;display:inline-block;flex:none}
+.ak94-printer-dot.on{background:#229a60}
+.ak94-chooser{display:grid;gap:15px;max-width:100%;color:var(--text)}
+.ak94-chooser p{margin:0!important;color:var(--muted)!important;font-size:12px;line-height:1.5}
+.ak94-chooser label{display:block;margin-bottom:6px!important;font-size:12px;font-weight:750;color:var(--text)!important}
+.ak94-chooser select{width:100%!important;max-width:none!important;min-height:45px!important;height:45px!important;border-radius:12px!important;border:1px solid var(--line)!important;background:var(--panel)!important;color:var(--text)!important;padding:0 12px!important;font-size:13px!important}
+.ak94-chooser-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.ak94-chooser-status{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
+.ak94-chooser-status .ak94-printer-dot{margin-top:6px}
+.ak94-status-main{font-size:13px;font-weight:800;color:var(--text)}
+.ak94-status-desc{font-size:11px;line-height:1.4;color:var(--muted);margin-top:3px}
+.ak94-chooser-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ak94-chooser-actions button{width:100%;min-height:43px!important;border-radius:11px!important;font-size:12px!important}
+.ak94-printer-note{border-top:1px solid var(--line);padding-top:12px;font-size:11px!important;color:var(--muted);line-height:1.5}
+.ak94-settings-entry{margin-left:auto}
+@media(max-width:740px){.ak94-chooser-row{grid-template-columns:1fr}.ak94-settings-entry{margin-left:0}.ak94-printer-trigger{min-height:42px!important}#modalBody .ak94-chooser{padding:0 2px}.ak94-chooser-actions{grid-template-columns:1fr 1fr}}
+.ak94-chooser [hidden]{display:none!important}
+.ak94-chooser-actions:has(#ak94Disconnect[hidden]) #ak94Connect{grid-column:1/-1}

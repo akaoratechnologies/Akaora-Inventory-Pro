@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#14131b">
+<title>Akaora Inventory Pro · Updating</title>
+<style>
+*{box-sizing:border-box}body{min-height:100dvh;margin:0;display:grid;place-items:center;padding:22px;background:radial-gradient(circle at 50% 0%,#312548,#13121c 65%);color:#f9f7ff;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif}.panel{max-width:450px;width:100%;padding:36px 28px;text-align:center;border:1px solid #4e465c;border-radius:23px;background:#24202e;box-shadow:0 25px 65px #0007}.mark{width:56px;height:56px;margin:0 auto 15px;border-radius:16px;display:grid;place-items:center;background:#9872ed;color:#fff;font-weight:900;font-size:29px}h1{font-size:20px;margin:4px 0 10px;letter-spacing:-.03em}.badge{font-size:12px;color:#f3ce76;border:1px solid #7b6034;border-radius:20px;padding:4px 9px;margin-left:4px}p{font-size:13px;line-height:1.65;color:#bdb6cf}#message{margin:16px 0 18px}.progress{height:5px;background:#41394e;border-radius:99px;overflow:hidden}.bar{width:45%;height:100%;background:linear-gradient(90deg,#9373ea,#c0aaff);border-radius:99px;animation:loading 1.4s ease-in-out infinite alternate}@keyframes loading{from{transform:translateX(-60%)}to{transform:translateX(180%)}}button{width:100%;padding:12px;border:1px solid #b59bfa;border-radius:12px;background:#906fec;color:#fff;font-weight:800;cursor:pointer}button[hidden]{display:none}small{display:block;margin-top:20px;color:#aaa3b8;font-size:11px}
+</style>
+</head>
+<body>
+<main class="panel"><div class="mark">A</div><h1>Akaora Inventory <span class="badge">Pro</span></h1><p id="message" role="status" aria-live="polite">Updating application files to v95…</p><div class="progress" id="progress"><div class="bar"></div></div><button type="button" id="retry" hidden>Retry update</button><small>Your inventory, saved invoices and sign-in data remain untouched.</small></main>
+<script>
+(function(){
+'use strict';
+const message=document.getElementById('message'),retry=document.getElementById('retry'),progress=document.getElementById('progress');
+const destination=new URL('./?akaora_build=v95',location.href).href;
+function launch(){message.textContent='Update complete. Opening your workspace…';location.replace(destination)}
+async function update(){
+ retry.hidden=true;progress.hidden=false;
+ // Retire the removed Advanced Barcode Studio's dedicated worker and cache.
+ // Do not clear localStorage, IndexedDB, credentials or inventory records.
+ if('serviceWorker' in navigator){
+  try{
+   const registrations=await navigator.serviceWorker.getRegistrations();
+   for(const worker of registrations){
+    const pathname=new URL(worker.scope).pathname;
+    if(/\/barcode-studio\/?$/.test(pathname))await worker.unregister();
+   }
+  }catch(e){console.warn('Old designer worker cleanup skipped:',e)}
+ }
+ if('caches' in window){
+  try{
+   const names=await caches.keys();
+   await Promise.all(names.filter(k=>k.startsWith('akaora-barcode-studio-')).map(k=>caches.delete(k)));
+  }catch(e){console.warn('Old designer cache cleanup skipped:',e)}
+ }
+ if(!('serviceWorker' in navigator)){launch();return}
+ try{
+  const reg=await navigator.serviceWorker.register('./service-worker.js?v=94',{scope:'./',updateViaCache:'none'});
+  await reg.update();
+  const current=()=>{try{return reg.active&&new URL(reg.active.scriptURL).searchParams.get('v')==='94'}catch(_){return false}};
+  if(current()){launch();return}
+  message.textContent='Replacing the previous offline app version securely…';
+  const deadline=Date.now()+15000;
+  await new Promise((resolve,reject)=>{
+   let timer;
+   const tick=()=>{
+    if(current()){clearTimeout(timer);resolve();return}
+    if(Date.now()>deadline){reject(new Error('Could not activate the latest offline version'));return}
+    timer=setTimeout(tick,250)
+   };tick()
+  });
+  launch();
+ }catch(error){
+  message.textContent='The update could not finish: '+(error&&error.message?error.message:'Unknown error')+'. Check that the v95 launcher window is open, then retry.';
+  progress.hidden=true;retry.hidden=false;
+ }
+}
+retry.addEventListener('click',update);update();
+})();
+</script>
+</body></html>
